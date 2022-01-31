@@ -18,7 +18,7 @@ from math import pi
 # 6th input: dZ
 # 7th input: refP
 # 8th input: move
-xL = int(float(sys.argv[1]))
+xL = float(sys.argv[1])
 yL = int(float(sys.argv[2]))
 depth = int(float(sys.argv[3]))
 dX = int(float(sys.argv[4]))
@@ -26,12 +26,13 @@ dY = int(float(sys.argv[5]))
 dZ = int(float(sys.argv[6]))
 refP = int(float(sys.argv[7]))
 move = int(float(sys.argv[8]))
+knot = float(sys.argv[9])
 #
 square1 = sf.square(size=(xL,yL))
 sq1 = vf.extrude(square1, amount=(0,0,depth))
 sq1.raise_order(refP)
-
-#sq1.insert_knot(0.85,direction=0)
+if knot>0:
+    sq1.insert_knot(knot/xL,direction=0)
 
 sq1.translate((dX,dY,dZ))
 sq1.translate((move,move,0))

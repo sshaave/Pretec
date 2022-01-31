@@ -18,6 +18,8 @@ from math import pi
 # 6th input: dZ
 # 7th input: refP
 # 8th input: move
+# refine global in Y
+# refine in X (for local)
 xL = int(float(sys.argv[1]))
 yL = int(float(sys.argv[2]))
 depth = int(float(sys.argv[3]))
@@ -26,12 +28,16 @@ dY = int(float(sys.argv[5]))
 dZ = int(float(sys.argv[6]))
 refP = int(float(sys.argv[7]))
 move = int(float(sys.argv[8]))
+knot = int(float(sys.argv[9]))
+knotX = int(float(sys.argv[10]))
 #
 square1 = sf.square(size=(xL,yL))
 sq1 = vf.extrude(square1, amount=(0,0,depth))
 sq1.raise_order(refP)
-
-#sq1.insert_knot(0.85,direction=0)
+if knot>0:
+    sq1.insert_knot(knot/xL,direction=0)
+if knotX>0:
+    sq1.insert_knot(knotX/yL, direction=1)
 
 sq1.translate((dX,dY,-dZ))
 sq1.translate((move,move,0))

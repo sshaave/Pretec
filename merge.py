@@ -8,6 +8,9 @@ elif sys.argv[2] == 'middleSquares':
 elif sys.argv[2] == 'multi':
     with open('G2/'+sys.argv[1]+'.g2','a') as i1:
         with open('G2/litenMulti.g2','r') as i2: i1.write(i2.read())
+elif sys.argv[2] == 'HD':
+    with open('G2/total.g2','a') as i1:
+        with open('G2/litenMulti.g2','r') as i2: i1.write(i2.read())
 elif sys.argv[2] == 'outer':
     with open('G2/'+sys.argv[1]+'.g2','a') as i1:
         with open('G2/firstX.g2','r') as i2: i1.write(i2.read()+'\n')
