@@ -1,0 +1,388 @@
+
+ >>> IFEM Linear Elasticity solver <<<
+ =====================================
+
+ Executing command:
+ LinEl linKnekking.xinp
+
+ ===== IFEM v0.9.0 initialized =====
+       HDF5 support: enabled
+  LR spline support: enabled
+     OpenMP support: enabled
+        MPI support: disabled
+      PETSc support: disabled
+    SuperLU support: enabled (serial)
+    UMFPack support: enabled (v5.7.6)
+       ISTL support: disabled
+        VTF support: disabled
+
+Input file: linKnekking.xinp
+Equation solver: 2
+Number of Gauss points: 4
+Solution component output zero tolerance: 1e-06
+
+Parsing input file linKnekking.xinp
+
+Parsing <discretization>
+
+Parsing <geometry>
+  Parsing <patchfile>
+	Reading data file G2/total.g2
+	Reading patch 1
+	Reading patch 2
+	Reading patch 3
+	Reading patch 4
+	Reading patch 5
+	Reading patch 6
+	Reading patch 7
+	Reading patch 8
+	Reading patch 9
+	Reading patch 10
+	Reading patch 11
+	Reading patch 12
+	Reading patch 13
+	Reading patch 14
+	Reading patch 15
+	Reading patch 16
+  Parsing <raiseorder>
+  Parsing <refine>
+  Parsing <refine>
+  Parsing <refine>
+  Parsing <refine>
+  Parsing <refine>
+  Parsing <topology>
+  Parsing <topologysets>
+	Topology sets: b1 (1,3,2D)
+	               b2 (1,11,1D) (3,9,1D) (2,1,2D)
+	               b3 (1,12,1D) (3,10,1D) (2,2,2D)
+	               lastflate (13,6,2D)
+	               stiverplate (16,3,2D)
+	               symmXZ (13,4,2D) (14,4,2D) (15,4,2D) (16,4,2D)
+  Parsing <patchfile>
+  Parsing <raiseorder>
+	Raising order of P1 1 1 1
+	Raising order of P2 1 1 1
+	Raising order of P3 1 1 1
+	Raising order of P4 1 1 1
+	Raising order of P5 1 1 1
+	Raising order of P6 1 1 1
+	Raising order of P7 1 1 1
+	Raising order of P8 1 1 1
+	Raising order of P9 1 1 1
+	Raising order of P10 1 1 1
+	Raising order of P11 1 1 1
+	Raising order of P12 1 1 1
+	Raising order of P13 1 1 1
+	Raising order of P14 1 1 1
+	Raising order of P15 1 1 1
+	Raising order of P16 1 1 1
+  Parsing <refine>
+	Refining P1 2 2 2
+	Refining P2 2 2 2
+	Refining P3 2 2 2
+	Refining P4 2 2 2
+	Refining P5 2 2 2
+	Refining P6 2 2 2
+	Refining P7 2 2 2
+	Refining P8 2 2 2
+	Refining P9 2 2 2
+	Refining P10 2 2 2
+	Refining P11 2 2 2
+	Refining P12 2 2 2
+	Refining P13 2 2 2
+	Refining P14 2 2 2
+	Refining P15 2 2 2
+	Refining P16 2 2 2
+  Parsing <refine>
+  Parsing <refine>
+	Refining P9 0 0 3
+	Refining P10 0 0 3
+  Parsing <refine>
+	Refining P15 0 0 3
+  Parsing <refine>
+	Refining P13 0 5 0
+	Refining P14 0 5 0
+	Refining P15 0 5 0
+	Refining P16 0 5 0
+  Parsing <topology>
+	Connecting P2 F3 to P1 F4 orient 0
+	Connecting P3 F3 to P2 F4 orient 0
+	Connecting P4 F3 to P3 F4 orient 0
+	Connecting P6 F6 to P4 F5 orient 0
+	Connecting P5 F3 to P4 F4 orient 0
+	Connecting P7 F6 to P5 F5 orient 0
+	Connecting P7 F3 to P6 F4 orient 0
+	Connecting P9 F6 to P7 F5 orient 0
+	Connecting P8 F1 to P7 F2 orient 0
+	Connecting P10 F6 to P8 F5 orient 0
+	Connecting P16 F3 to P8 F4 orient 0
+	Connecting P11 F6 to P9 F5 orient 0
+	Connecting P10 F1 to P9 F2 orient 0
+	Connecting P12 F6 to P10 F5 orient 0
+	Connecting P15 F3 to P10 F4 orient 0
+	Connecting P13 F3 to P11 F4 orient 0
+	Connecting P12 F1 to P11 F2 orient 0
+	Connecting P14 F3 to P12 F4 orient 0
+	Connecting P14 F1 to P13 F2 orient 0
+	Connecting P15 F5 to P14 F6 orient 0
+	Connecting P16 F5 to P15 F6 orient 0
+  Parsing <topologysets>
+
+Parsing <boundaryconditions>
+  Parsing <dirichlet>
+	Dirichlet code 123: (fixed)
+  Parsing <dirichlet>
+	Dirichlet code 1000123: (fixed)
+  Parsing <dirichlet>
+	Dirichlet code 2000123: (fixed)
+  Parsing <dirichlet>
+	Dirichlet code 2: (fixed)
+  Parsing <neumann>
+	Neumann code 1000000 direction 3 (expression): if(below(x,110),-0.22425-0.39375*(y-154)/597*(0.9+0.2*(x-30)/80),0)
+
+Parsing <elasticity>
+  Parsing <isotropic>
+	Material code 0: 210000 0.3 0.00785
+	Gravitation vector: 0 0 -0.00981
+  Parsing <boundaryforce>
+	Boundary force "b1" code 2000000
+  Parsing <boundaryforce>
+	Boundary force "b2" code 3000000
+  Parsing <boundaryforce>
+	Boundary force "b3" code 4000000
+
+Parsing <eigensolver>
+
+Parsing <postprocessing>
+  Parsing <hdf5>
+
+Parsing input file succeeded.
+
+
+Equation solver: 2
+Eigenproblem solver: 5
+Number of eigenvalues: 10
+Number of Arnoldi vectors: 20
+Shift value: 0
+Number of Gauss points: p+1 (p = polynomial degree of basis)
+HDF5 result database: (default).hdf5
+
+Problem definition:
+Elasticity: 3D, gravity = 0 0 -0.00981
+LinIsotropic: E = 210000, nu = 0.3, rho = 0.00785, alpha = 1.2e-07
+
+Renumbered 9195 nodes.
+
+Resolving Dirichlet boundary conditions
+	Constraining P1 E11 in direction(s) 123
+	Constraining P3 E9 in direction(s) 123
+	Constraining P1 E12 in direction(s) 123
+	Constraining P3 E10 in direction(s) 123
+	Constraining P1 F3 in direction(s) 123
+	Constraining P2 F1 in direction(s) 123
+	Constraining P2 F2 in direction(s) 123
+	Constraining P13 F4 in direction(s) 2
+	Constraining P14 F4 in direction(s) 2
+	Constraining P15 F4 in direction(s) 2
+	Constraining P16 F4 in direction(s) 2
+
+
+ >>> SAM model summary <<<
+Number of elements    3402
+Number of nodes       8174
+Number of dofs        24522
+Number of unknowns    24087
+Boundary section 1: X0 = 80 30 6
+Boundary section 2: X0 = 30 90 6
+Boundary section 3: X0 = 130 90 6
+
+Writing HDF5 file linKnekking.hdf5
+Number of quadrature points 99711 2331
+
+Pre-computing sparsity pattern for system matrix (24087x24087): nNZ = 5827177
+
+
+Processing integrand associated with code 0
+
+Assembling interior matrix terms for P1
+
+Assembling interior matrix terms for P2
+
+Assembling interior matrix terms for P3
+
+Assembling interior matrix terms for P4
+
+Assembling interior matrix terms for P5
+
+Assembling interior matrix terms for P6
+
+Assembling interior matrix terms for P7
+
+Assembling interior matrix terms for P8
+
+Assembling interior matrix terms for P9
+
+Assembling interior matrix terms for P10
+
+Assembling interior matrix terms for P11
+
+Assembling interior matrix terms for P12
+
+Assembling interior matrix terms for P13
+
+Assembling interior matrix terms for P14
+
+Assembling interior matrix terms for P15
+
+Assembling interior matrix terms for P16
+
+Assembling Neumann matrix terms for boundary 6 on P13
+
+Done.
+
+Sum external load : 0 0 -20216
+
+Solving the equation system ...
+	Condition number: 7.84328e+09
+
+ >>> Solution summary <<<
+
+L2-norm            : 3.82483
+Max X-displacement : 23.8453 node 8170
+Max Y-displacement : 0.817149 node 1514
+Max Z-displacement : 14.7343 node 3150
+
+Reaction force at section 1 : -522.974 -2468.34 -1746.95
+Reaction force at section 2 : 409.997 1263.9 13170.3
+Reaction force at section 3 : 112.977 -13580.6 8793.59
+Total reaction force        : -4.0206e-06 -14785 20217
+
+Projecting secondary solution ...
+	Greville point projection
+
+
+Integrating solution norms (FE solution) ...
+Energy norm |u^h| = a(u^h,u^h)^0.5   : 366.703
+External energy ((f,u^h)+(t,u^h)^0.5 : 366.703
+Boundary tractions at section 1: -523.228 -2664.12 -2257.06 -31702 912.569 -16553.4
+Boundary tractions at section 2: 172.856 609.675 8200.56 360196 -65280.3 -23754.7
+Boundary tractions at section 3: -1664.3 -10784.1 5464.35 274018 88797.9 64857.8
+
+
+>>> Error estimates based on Greville point projection <<<
+Energy norm |u^r| = a(u^r,u^r)^0.5   : 362.835
+Error norm a(e,e)^0.5, e=u^r-u^h     : 32.8645
+- relative error (% of |u^r|) : 9.05768
+L2-norm |s^r| = (s^r,s^r)^0.5        : 118934
+L2-error (e,e)^0.5, e=s^r-s^h        : 13309.2
+- relative error (% of |s^r|) : 11.1905
+
+Pre-computing sparsity pattern for system matrix (24087x24087): nNZ = 5827177
+
+Pre-computing sparsity pattern for system matrix (24087x24087): nNZ = 5827177
+
+
+Processing integrand associated with code 0
+
+Assembling interior matrix terms for P1
+
+Assembling interior matrix terms for P2
+
+Assembling interior matrix terms for P3
+
+Assembling interior matrix terms for P4
+
+Assembling interior matrix terms for P5
+
+Assembling interior matrix terms for P6
+
+Assembling interior matrix terms for P7
+
+Assembling interior matrix terms for P8
+
+Assembling interior matrix terms for P9
+
+Assembling interior matrix terms for P10
+
+Assembling interior matrix terms for P11
+
+Assembling interior matrix terms for P12
+
+Assembling interior matrix terms for P13
+
+Assembling interior matrix terms for P14
+
+Assembling interior matrix terms for P15
+
+Assembling interior matrix terms for P16
+
+Done.
+
+Solving the eigenvalue problem ...
+
+ >>> Computed Eigenvalues <<<
+     Mode	Eigenvalue
+     1		0
+     2		0
+     3		0
+     4		0
+     5		0
+     6		0
+     7		0
+     8		0
+     9		0
+     10		0
+
+===============================================================
+===   Profiling results for LinEl
+=================================================================
+                      |       CPU time     |      Wall time     |
+Task                  |  Total(s)  Mean(ms)|  Total(s)  Mean(ms)| calls | thread
+----------------------+--------------------+--------------------+-------+-------
+ASMs3D::evalSol(S)    |      0.02     0.98 |      0.02     1.29 |    16
+ASMs3D::integrate(B)  |      2.28   456.25 |      0.14    27.33 |     5
+ASMs3D::integrate(I)  |     42.88   779.55 |      4.86    88.44 |    55
+ASMs3D::projectSolutio|      0.02     0.98 |      0.03     1.57 |    16
+DataExporter::dumpTime|      0.06          |      0.07          |
+Eigenvalue analysis   |     10.16          |     10.27          |
+Element assembly      |     36.36 12119.79 |      4.41  1469.73 |     3
+Equation solving      |      7.03          |      7.04          |
+Norm integration      |      7.70          |      0.55          |
+Postprocessing        |      0.06          |      0.07          |
+SIM::getBoundaryForce |      1.12   375.00 |      0.05    18.15 |     3
+Solution projection   |      0.02          |      0.03          |
+Spline evaluation     |      1.53    20.15 |      0.10     1.36 |    76
+Other                 |      5.70          |      5.56          |
+----------------------+--------------------+--------------------+-------+-------
+Total time            |     68.16          |     27.98          |
+=================================================================
+  
+  Entering EIG_DRV5       24087          10          20   0.0000000000000000     
+
+ Ritz values and relative residuals
+ ----------------------------------
+               Col   1       Col   2
+  Row   1:    0.00000D+00      Infinity
+  Row   2:    0.00000D+00      Infinity
+  Row   3:    0.00000D+00      Infinity
+  Row   4:    0.00000D+00      Infinity
+  Row   5:    0.00000D+00      Infinity
+  Row   6:    0.00000D+00      Infinity
+  Row   7:    0.00000D+00      Infinity
+  Row   8:    0.00000D+00      Infinity
+  Row   9:    0.00000D+00      Infinity
+  Row  10:    0.00000D+00      Infinity
+  
+  
+  EIG_DRV5
+  ========
+  
+  Size of the matrix is        24087
+  The number of Ritz values requested is           10
+  The number of Arnoldi vectors generated (NCV) is           20
+  What portion of the spectrum: LM
+  The number of converged Ritz values is           10
+  The number of Implicit Arnoldi update iterations taken is            9
+  The number of OP*x is           61
+  The convergence criterion is    1.1102230246251565E-016
+  
