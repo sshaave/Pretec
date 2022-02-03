@@ -27,7 +27,7 @@ Parsing <discretization>
 
 Parsing <geometry>
   Parsing <patchfile>
-	Reading data file G2/total.g2
+	Reading data file G2/linKnekking.g2
 	Reading patch 1
 	Reading patch 2
 	Reading patch 3
@@ -163,7 +163,7 @@ Equation solver: 2
 Eigenproblem solver: 5
 Number of eigenvalues: 10
 Number of Arnoldi vectors: 20
-Shift value: 0
+Shift value: 0.001
 Number of Gauss points: p+1 (p = polynomial degree of basis)
 HDF5 result database: (default).hdf5
 
@@ -240,42 +240,42 @@ Assembling Neumann matrix terms for boundary 6 on P13
 
 Done.
 
-Sum external load : 0 0 -20216
+Sum external load : 0 0 -20215.9
 
 Solving the equation system ...
-	Condition number: 7.84328e+09
+	Condition number: 8.0447e+09
 
  >>> Solution summary <<<
 
-L2-norm            : 3.82483
-Max X-displacement : 23.8453 node 8170
-Max Y-displacement : 0.817149 node 1514
-Max Z-displacement : 14.7343 node 3150
+L2-norm            : 3.83072
+Max X-displacement : 23.9307 node 8170
+Max Y-displacement : 0.818141 node 1514
+Max Z-displacement : 14.7566 node 3150
 
-Reaction force at section 1 : -522.974 -2468.34 -1746.95
-Reaction force at section 2 : 409.997 1263.9 13170.3
-Reaction force at section 3 : 112.977 -13580.6 8793.59
-Total reaction force        : -4.0206e-06 -14785 20217
+Reaction force at section 1 : -527.176 -2499.78 -1743.37
+Reaction force at section 2 : 408.104 1274.72 13168.9
+Reaction force at section 3 : 119.073 -13689.3 8791.31
+Total reaction force        : 0 -14914.4 20216.8
 
 Projecting secondary solution ...
 	Greville point projection
 
 
 Integrating solution norms (FE solution) ...
-Energy norm |u^h| = a(u^h,u^h)^0.5   : 366.703
-External energy ((f,u^h)+(t,u^h)^0.5 : 366.703
-Boundary tractions at section 1: -523.228 -2664.12 -2257.06 -31702 912.569 -16553.4
-Boundary tractions at section 2: 172.856 609.675 8200.56 360196 -65280.3 -23754.7
-Boundary tractions at section 3: -1664.3 -10784.1 5464.35 274018 88797.9 64857.8
+Energy norm |u^h| = a(u^h,u^h)^0.5   : 366.955
+External energy ((f,u^h)+(t,u^h)^0.5 : 366.955
+Boundary tractions at section 1: -527.416 -2698.04 -2252.49 -31625.9 908.917 -16686.7
+Boundary tractions at section 2: 165.967 610.079 8194.35 359837 -65193.2 -23941
+Boundary tractions at section 3: -1670.87 -10872 5468.87 273598 88699 65375.8
 
 
 >>> Error estimates based on Greville point projection <<<
-Energy norm |u^r| = a(u^r,u^r)^0.5   : 362.835
-Error norm a(e,e)^0.5, e=u^r-u^h     : 32.8645
-- relative error (% of |u^r|) : 9.05768
-L2-norm |s^r| = (s^r,s^r)^0.5        : 118934
-L2-error (e,e)^0.5, e=s^r-s^h        : 13309.2
-- relative error (% of |s^r|) : 11.1905
+Energy norm |u^r| = a(u^r,u^r)^0.5   : 363.084
+Error norm a(e,e)^0.5, e=u^r-u^h     : 32.8873
+- relative error (% of |u^r|) : 9.05776
+L2-norm |s^r| = (s^r,s^r)^0.5        : 118974
+L2-error (e,e)^0.5, e=s^r-s^h        : 13316.3
+- relative error (% of |s^r|) : 11.1926
 
 Pre-computing sparsity pattern for system matrix (24087x24087): nNZ = 5827177
 
@@ -322,16 +322,16 @@ Solving the eigenvalue problem ...
 
  >>> Computed Eigenvalues <<<
      Mode	Eigenvalue
-     1		0
-     2		0
-     3		0
-     4		0
-     5		0
-     6		0
-     7		0
-     8		0
-     9		0
-     10		0
+     1		1.53258
+     2		2.5396
+     3		3.98617
+     4		5.97287
+     5		8.70107
+     6		12.4505
+     7		17.5506
+     8		24.3251
+     9		28.4271
+     10		32.7765
 
 ===============================================================
 ===   Profiling results for LinEl
@@ -339,39 +339,39 @@ Solving the eigenvalue problem ...
                       |       CPU time     |      Wall time     |
 Task                  |  Total(s)  Mean(ms)|  Total(s)  Mean(ms)| calls | thread
 ----------------------+--------------------+--------------------+-------+-------
-ASMs3D::evalSol(S)    |      0.02     0.98 |      0.02     1.29 |    16
-ASMs3D::integrate(B)  |      2.28   456.25 |      0.14    27.33 |     5
-ASMs3D::integrate(I)  |     42.88   779.55 |      4.86    88.44 |    55
-ASMs3D::projectSolutio|      0.02     0.98 |      0.03     1.57 |    16
-DataExporter::dumpTime|      0.06          |      0.07          |
-Eigenvalue analysis   |     10.16          |     10.27          |
-Element assembly      |     36.36 12119.79 |      4.41  1469.73 |     3
-Equation solving      |      7.03          |      7.04          |
-Norm integration      |      7.70          |      0.55          |
-Postprocessing        |      0.06          |      0.07          |
-SIM::getBoundaryForce |      1.12   375.00 |      0.05    18.15 |     3
-Solution projection   |      0.02          |      0.03          |
-Spline evaluation     |      1.53    20.15 |      0.10     1.36 |    76
-Other                 |      5.70          |      5.56          |
+ASMs3D::evalSol(S)    |      0.05     2.93 |      0.02     1.25 |    16
+ASMs3D::integrate(B)  |      2.22   443.75 |      0.09    18.44 |     5
+ASMs3D::integrate(I)  |     38.77   704.83 |      4.21    76.54 |    55
+ASMs3D::projectSolutio|      0.05     2.93 |      0.02     1.53 |    16
+DataExporter::dumpTime|      0.08          |      0.08          |
+Eigenvalue analysis   |     12.44          |     12.52          |
+Element assembly      |     33.19 11062.50 |      3.95  1315.48 |     3
+Equation solving      |      7.38          |      7.10          |
+Norm integration      |      6.64          |      0.33          |
+Postprocessing        |      0.08          |      0.08          |
+SIM::getBoundaryForce |      1.17   390.62 |      0.03    11.42 |     3
+Solution projection   |      0.05          |      0.02          |
+Spline evaluation     |      1.22    16.04 |      0.10     1.35 |    76
+Other                 |      5.53          |      5.53          |
 ----------------------+--------------------+--------------------+-------+-------
-Total time            |     68.16          |     27.98          |
+Total time            |     66.47          |     29.59          |
 =================================================================
   
-  Entering EIG_DRV5       24087          10          20   0.0000000000000000     
+  Entering EIG_DRV5       24087          10          20   1.0000000000000000E-003
 
  Ritz values and relative residuals
  ----------------------------------
                Col   1       Col   2
-  Row   1:    0.00000D+00      Infinity
-  Row   2:    0.00000D+00      Infinity
-  Row   3:    0.00000D+00      Infinity
-  Row   4:    0.00000D+00      Infinity
-  Row   5:    0.00000D+00      Infinity
-  Row   6:    0.00000D+00      Infinity
-  Row   7:    0.00000D+00      Infinity
-  Row   8:    0.00000D+00      Infinity
-  Row   9:    0.00000D+00      Infinity
-  Row  10:    0.00000D+00      Infinity
+  Row   1:    1.53258D+00   2.93393D+00
+  Row   2:    2.53960D+00   3.45659D+00
+  Row   3:    3.98617D+00   3.47063D+00
+  Row   4:    5.97287D+00   3.28466D+00
+  Row   5:    8.70107D+00   3.00782D+00
+  Row   6:    1.24505D+01   2.73347D+00
+  Row   7:    1.75506D+01   2.48448D+00
+  Row   8:    2.43251D+01   2.24880D+00
+  Row   9:    2.84271D+01   1.61546D+00
+  Row  10:    3.27765D+01   2.01679D+00
   
   
   EIG_DRV5
@@ -382,7 +382,7 @@ Total time            |     68.16          |     27.98          |
   The number of Arnoldi vectors generated (NCV) is           20
   What portion of the spectrum: LM
   The number of converged Ritz values is           10
-  The number of Implicit Arnoldi update iterations taken is            9
-  The number of OP*x is           61
+  The number of Implicit Arnoldi update iterations taken is           17
+  The number of OP*x is          105
   The convergence criterion is    1.1102230246251565E-016
   

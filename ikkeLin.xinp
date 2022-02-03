@@ -8,8 +8,8 @@
 <geometry>
 	<patchfile>G2/nlTotal.g2</patchfile>
 	<raiseorder lowerpatch="1" u="1" v="1" w="1"/>
-	<refine lowerpatch="1" u="2" v="2" w="2"/>
-	<refine lowerpatch="1" upperpatch="0" v="0"/>
+	<refine lowerpatch="1" u="3" v="3" w="3"/>
+	<refine lowerpatch="1" upperpatch="2" v="2"/>
 	<refine lowerpatch="9" upperpatch="10" w="3"/>
 	<refine patch="15" w="3"/>
 	<refine lowerpatch="13" v="6"/>

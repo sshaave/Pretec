@@ -6,7 +6,7 @@
 
 <!-- Geometry definitions -->
 <geometry>
-	<patchfile>G2/total.g2</patchfile>
+	<patchfile>G2/linKnekking.g2</patchfile>
 	<raiseorder lowerpatch="1" u="1" v="1" w="1"/>
 	<refine lowerpatch="1" u="2" v="2" w="2"/>
 	<refine lowerpatch="1" upperpatch="0" v="0"/>
@@ -95,6 +95,7 @@
 <eigensolver>
     <mode>5</mode>
 <!--    <nev>10</nev> !-->
+    <shift>1e-3</shift>
 </eigensolver>
 
 <!-- Post processing !-->
