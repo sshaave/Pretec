@@ -7,7 +7,7 @@
 <!-- Geometry definitions -->
 <geometry>
 	<patchfile>G2/total.g2</patchfile>
-	<raiseorder lowerpatch="1" u="1" v="1" w="1"/>
+	<raiseorder lowerpatch="1" u="0" v="0" w="0"/>
 	<refine lowerpatch="1" u="2" v="2" w="2"/>
 	<refine lowerpatch="1" upperpatch="0" v="0"/>
 	<refine lowerpatch="9" upperpatch="10" w="3"/>
@@ -61,8 +61,13 @@
             <item patch="3">10</item>
         </set>
 		<set name="stiverplate" type="face">
+            <item patch="15">3</item>
 			<item patch="16">3</item>
 		</set>
+        <set name="bunnplate" type="face">
+            <item patch="13">3</item>
+            <item patch="14">3</item>
+        </set>
 		<set name="lastflate" type="face">
 			<item patch="13">6</item>
 		</set>
@@ -90,6 +95,8 @@
     <boundaryforce set="b1"/>
     <boundaryforce set="b2"/>
 	<boundaryforce set="b3"/>
+    <boundaryforce set="stiverplate"/>
+    <boundaryforce set="bunnplate"/>
 </elasticity>
 
 <!-- Post processing !-->
