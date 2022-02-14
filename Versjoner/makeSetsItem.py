@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+import sys
+import os
+# 1st input: name of result file
+textFile = sys.argv[1]
+with open(textFile+'.txt','w') as i1:
+    i1.write('\t\t<set name="allEdges" type="face">\n')
+    i1.write('\t\t\t<item patch="1">3</item>\n')
+    i1.write('\t\t\t<item patch="2">1 2</item>\n')
+#    i1.write('\t\t\t<item patch="17">5</item>\n')
+#    i1.write('\t\t\t<item patch="18">5</item>\n')
+    i1.write('\t\t</set>\n')
+    i1.write('\t\t<set name="symmXZ" type="face">\n')
+    i1.write('\t\t\t<item patch="13">4</item>\n')
+    i1.write('\t\t\t<item patch="14">4</item>\n')
+    i1.write('\t\t\t<item patch="15">4</item>\n')
+    i1.write('\t\t\t<item patch="16">4</item>\n')
+    i1.write('\t\t</set>\n')
+    i1.write('\t\t<set name="b1" type="face">\n')
+    i1.write('\t\t\t<item patch="1">3</item>\n')
+    i1.write('\t\t</set>\n')
+    i1.write('\t\t<set name="b2" type="face">\n')
+    i1.write('\t\t\t<item patch="2">1</item>\n')
+    i1.write('\t\t</set>\n')
+    i1.write('\t\t<set name="b2" type="edge">\n')
+    i1.write('\t\t\t<item patch="1">11</item>\n')
+    i1.write('\t\t\t<item patch="3">9</item>\n')
+    i1.write('\t\t</set>\n')
+    i1.write('\t\t<set name="b3" type="face">\n')
+    i1.write('\t\t\t<item patch="2">2</item>\n')
+    i1.write('\t\t</set>\n')
+    i1.write('\t\t<set name="b3" type="edge">\n')
+    i1.write('\t\t\t<item patch="1">12</item>\n')
+    i1.write('\t\t\t<item patch="3">10</item>\n')
+    i1.write('\t\t</set>\n')
+    i1.write('\t\t<set name="stiverplate" type="face">\n')
+    i1.write('\t\t\t<item patch="16">3</item>\n')
+    i1.write('\t\t</set>\n')

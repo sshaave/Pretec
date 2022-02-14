@@ -8,7 +8,7 @@
 <geometry>
 	<patchfile>G2/total.g2</patchfile>
 	<raiseorder lowerpatch="1" u="0" v="0" w="0"/>
-	<refine lowerpatch="1" u="2" v="2" w="2"/>
+	<refine lowerpatch="1" u="5" v="5" w="5"/>
 	<refine lowerpatch="1" upperpatch="0" v="0"/>
 	<refine lowerpatch="9" upperpatch="10" w="3"/>
 	<refine patch="15" w="3"/>
