@@ -1,4 +1,3 @@
-
  >>> IFEM Finite Deformation Nonlinear solver <<<
  ================================================
 
@@ -26,23 +25,23 @@ Parsing <discretization>
 
 Parsing <geometry>
   Parsing <patchfile>
-	Reading data file G2/nlTotal.g2
-	Reading patch 1
-	Reading patch 2
-	Reading patch 3
-	Reading patch 4
-	Reading patch 5
-	Reading patch 6
-	Reading patch 7
-	Reading patch 8
-	Reading patch 9
-	Reading patch 10
-	Reading patch 11
-	Reading patch 12
-	Reading patch 13
-	Reading patch 14
-	Reading patch 15
-	Reading patch 16
+        Reading data file G2/nlTotal.g2
+        Reading patch 1
+        Reading patch 2
+        Reading patch 3
+        Reading patch 4
+        Reading patch 5
+        Reading patch 6
+        Reading patch 7
+        Reading patch 8
+        Reading patch 9
+        Reading patch 10
+        Reading patch 11
+        Reading patch 12
+        Reading patch 13
+        Reading patch 14
+        Reading patch 15
+        Reading patch 16
   Parsing <raiseorder>
   Parsing <refine>
   Parsing <refine>
@@ -51,117 +50,119 @@ Parsing <geometry>
   Parsing <refine>
   Parsing <topology>
   Parsing <topologysets>
-	Topology sets: b1 (1,3,2D)
-	               b2 (1,11,1D) (3,9,1D) (2,1,2D)
-	               b3 (1,12,1D) (3,10,1D) (2,2,2D)
-	               lastflate (13,6,2D)
-	               stiverplate (16,3,2D)
-	               symmXZ (13,4,2D) (14,4,2D) (15,4,2D) (16,4,2D)
+        Topology sets: b1 (1,3,2D)
+                       b2 (1,11,1D) (3,9,1D) (2,1,2D)
+                       b3 (1,12,1D) (3,10,1D) (2,2,2D)
+                       lastflate (13,6,2D)
+                       stiverplate (16,3,2D)
+                       symmXZ (13,4,2D) (14,4,2D) (15,4,2D) (16,4,2D)
   Parsing <patchfile>
   Parsing <raiseorder>
-	Raising order of P1 1 1 1
-	Raising order of P2 1 1 1
-	Raising order of P3 1 1 1
-	Raising order of P4 1 1 1
-	Raising order of P5 1 1 1
-	Raising order of P6 1 1 1
-	Raising order of P7 1 1 1
-	Raising order of P8 1 1 1
-	Raising order of P9 1 1 1
-	Raising order of P10 1 1 1
-	Raising order of P11 1 1 1
-	Raising order of P12 1 1 1
-	Raising order of P13 1 1 1
-	Raising order of P14 1 1 1
-	Raising order of P15 1 1 1
-	Raising order of P16 1 1 1
+        Raising order of P1 2 2 2
+        Raising order of P2 2 2 2
+        Raising order of P3 2 2 2
+        Raising order of P4 2 2 2
+        Raising order of P5 2 2 2
+        Raising order of P6 2 2 2
+        Raising order of P7 2 2 2
+        Raising order of P8 2 2 2
+        Raising order of P9 2 2 2
+        Raising order of P10 2 2 2
+        Raising order of P11 2 2 2
+        Raising order of P12 2 2 2
+        Raising order of P13 2 2 2
+        Raising order of P14 2 2 2
+        Raising order of P15 2 2 2
+        Raising order of P16 2 2 2
   Parsing <refine>
-	Refining P1 3 3 3
-	Refining P2 3 3 3
-	Refining P3 3 3 3
-	Refining P4 3 3 3
-	Refining P5 3 3 3
-	Refining P6 3 3 3
-	Refining P7 3 3 3
-	Refining P8 3 3 3
-	Refining P9 3 3 3
-	Refining P10 3 3 3
-	Refining P11 3 3 3
-	Refining P12 3 3 3
-	Refining P13 3 3 3
-	Refining P14 3 3 3
-	Refining P15 3 3 3
-	Refining P16 3 3 3
+        Refining P1 2 2 2
+        Refining P2 2 2 2
+        Refining P3 2 2 2
+        Refining P4 2 2 2
+        Refining P5 2 2 2
+        Refining P6 2 2 2
+        Refining P7 2 2 2
+        Refining P8 2 2 2
+        Refining P9 2 2 2
+        Refining P10 2 2 2
+        Refining P11 2 2 2
+        Refining P12 2 2 2
+        Refining P13 2 2 2
+        Refining P14 2 2 2
+        Refining P15 2 2 2
+        Refining P16 2 2 2
   Parsing <refine>
-	Refining P1 0 2 0
-	Refining P2 0 2 0
+        Refining P1 0 2 0
+        Refining P2 0 2 0
   Parsing <refine>
-	Refining P9 0 0 3
-	Refining P10 0 0 3
+        Refining P9 0 0 2
+        Refining P10 0 0 2
   Parsing <refine>
-	Refining P15 0 0 3
+        Refining P15 0 0 2
   Parsing <refine>
-	Refining P13 0 6 0
-	Refining P14 0 6 0
-	Refining P15 0 6 0
-	Refining P16 0 6 0
+        Refining P13 0 3 0
+        Refining P14 0 3 0
+        Refining P15 0 3 0
+        Refining P16 0 3 0
   Parsing <topology>
-	Connecting P2 F3 to P1 F4 orient 0
-	Connecting P3 F3 to P2 F4 orient 0
-	Connecting P4 F3 to P3 F4 orient 0
-	Connecting P6 F6 to P4 F5 orient 0
-	Connecting P5 F3 to P4 F4 orient 0
-	Connecting P7 F6 to P5 F5 orient 0
-	Connecting P7 F3 to P6 F4 orient 0
-	Connecting P9 F6 to P7 F5 orient 0
-	Connecting P8 F1 to P7 F2 orient 0
-	Connecting P10 F6 to P8 F5 orient 0
-	Connecting P16 F3 to P8 F4 orient 0
-	Connecting P11 F6 to P9 F5 orient 0
-	Connecting P10 F1 to P9 F2 orient 0
-	Connecting P12 F6 to P10 F5 orient 0
-	Connecting P15 F3 to P10 F4 orient 0
-	Connecting P13 F3 to P11 F4 orient 0
-	Connecting P12 F1 to P11 F2 orient 0
-	Connecting P14 F3 to P12 F4 orient 0
-	Connecting P14 F1 to P13 F2 orient 0
-	Connecting P15 F5 to P14 F6 orient 0
-	Connecting P16 F5 to P15 F6 orient 0
+        Connecting P2 F3 to P1 F4 orient 0
+        Connecting P3 F3 to P2 F4 orient 0
+        Connecting P4 F3 to P3 F4 orient 0
+        Connecting P6 F6 to P4 F5 orient 0
+        Connecting P5 F3 to P4 F4 orient 0
+        Connecting P7 F6 to P5 F5 orient 0
+        Connecting P7 F3 to P6 F4 orient 0
+        Connecting P9 F6 to P7 F5 orient 0
+        Connecting P8 F1 to P7 F2 orient 0
+        Connecting P10 F6 to P8 F5 orient 0
+        Connecting P16 F3 to P8 F4 orient 0
+        Connecting P11 F6 to P9 F5 orient 0
+        Connecting P10 F1 to P9 F2 orient 0
+        Connecting P12 F6 to P10 F5 orient 0
+        Connecting P15 F3 to P10 F4 orient 0
+        Connecting P13 F3 to P11 F4 orient 0
+        Connecting P12 F1 to P11 F2 orient 0
+        Connecting P14 F3 to P12 F4 orient 0
+        Connecting P14 F1 to P13 F2 orient 0
+        Connecting P15 F5 to P14 F6 orient 0
+        Connecting P16 F5 to P15 F6 orient 0
   Parsing <topologysets>
 
 Parsing <boundaryconditions>
   Parsing <dirichlet>
-	Dirichlet code 123: (fixed)
+        Dirichlet code 123: (fixed)
   Parsing <dirichlet>
-	Dirichlet code 1000123: (fixed)
+        Dirichlet code 1000123: (fixed)
   Parsing <dirichlet>
-	Dirichlet code 2000123: (fixed)
+        Dirichlet code 2000123: (fixed)
   Parsing <dirichlet>
-	Dirichlet code 2: (fixed)
+        Dirichlet code 2: (fixed)
   Parsing <neumann>
-	Neumann code 1000000 direction 3 (expression): if(below(x,110),-0.22425*t-t*0.39375*(y-154)/597*(0.9+0.2*(x-30)/80),0)
+        Neumann code 1000000 direction 3 (expression): if(below(x,110),-0.17005*t-t*0.24422*(y-154)/597*(0.9+0.2*(x-30)/80),0)
 
 Parsing <elasticity>
   Parsing <isotropic>
-	Material code 0: 210000 0.3 0.00785
-	Gravitation vector: 0 0 -0.00981
+        Material code 0: 210000 0.3 0.00785
+        Gravitation vector: 0 0 -0.00981
   Parsing <boundaryforce>
-	Boundary force "b1" code 2000000
+        Boundary force "b1" code 2000000
   Parsing <boundaryforce>
-	Boundary force "b2" code 3000000
+        Boundary force "b2" code 3000000
   Parsing <boundaryforce>
-	Boundary force "b3" code 4000000
+        Boundary force "b3" code 4000000
 
 Parsing <nonlinearsolver>
 
 Parsing <postprocessing>
   Parsing <hdf5>
+  Parsing <projection>
 
 Parsing input file succeeded.
 
 
 Equation solver: 2
 Number of Gauss points: p+1 (p = polynomial degree of basis)
+Enabled projection(s): Continuous global L2-projection
 HDF5 result database: (default).hdf5
 Secondary solution variables are not saved.
 
@@ -177,170 +178,173 @@ Elasticity: 3D, gravity = 0 0 -0.00981
 LinIsotropic: E = 210000, nu = 0.3, rho = 0.00785, alpha = 1.2e-07
 Using C^(p-1) continuous displacement basis
 
-Renumbered 20016 nodes.
+Renumbered 10848 nodes.
 
 Resolving Dirichlet boundary conditions
-	Constraining P1 E11 in direction(s) 123
-	Constraining P3 E9 in direction(s) 123
-	Constraining P1 E12 in direction(s) 123
-	Constraining P3 E10 in direction(s) 123
-	Constraining P1 F3 in direction(s) 123
-	Constraining P2 F1 in direction(s) 123
-	Constraining P2 F2 in direction(s) 123
-	Constraining P13 F4 in direction(s) 2
-	Constraining P14 F4 in direction(s) 2
-	Constraining P15 F4 in direction(s) 2
-	Constraining P16 F4 in direction(s) 2
+        Constraining P1 E11 in direction(s) 123
+        Constraining P3 E9 in direction(s) 123
+        Constraining P1 E12 in direction(s) 123
+        Constraining P3 E10 in direction(s) 123
+        Constraining P1 F3 in direction(s) 123
+        Constraining P2 F1 in direction(s) 123
+        Constraining P2 F2 in direction(s) 123
+        Constraining P13 F4 in direction(s) 2
+        Constraining P14 F4 in direction(s) 2
+        Constraining P15 F4 in direction(s) 2
+        Constraining P16 F4 in direction(s) 2
 
 
  >>> SAM model summary <<<
-Number of elements    9600
-Number of nodes       18893
-Number of dofs        56679
-Number of unknowns    55749
+Number of elements    2457
+Number of nodes       10205
+Number of dofs        30615
+Number of unknowns    29793
 
-Pre-computing sparsity pattern for system matrix (55749x55749): nNZ = 14770407
+Pre-computing sparsity pattern for system matrix (29793x29793): nNZ = 15983871
 
 Writing HDF5 file ikkeLin.hdf5
 
+Global L2 projection will be used to compute
+smoothed secondary solution fields.
+
   step=1  time=0.1
-  iter=0  conv=1.000e+00  enen=1.400e+03  resn=1.430e+02  incn=9.194e+01
-  iter=1  conv=1.919e+00  enen=2.687e+03  resn=1.743e+05  incn=7.829e-01
-  iter=2  conv=5.156e-05  enen=7.219e-02  resn=2.216e+01  incn=8.381e-01
-  iter=3  conv=1.647e-08  enen=2.306e-05  resn=1.957e+01  incn=3.981e-04
-  Primary solution summary: L2-norm            : 0.388914
-                            Max X-displacement : 2.47134 node 18893
-                            Max Y-displacement : 0.0825864 node 3778
-                            Max Z-displacement : 1.50853 node 9487
-  Total reaction forces: Sum(R) = -6.89066e-06 -3.09476 -2115.33
-  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 37.4409
-  External energy: ((f,u^h)+(t,u^h))^0.5 : 37.4388
+  iter=0  conv=1.000e+00  enen=6.734e+02  resn=1.440e+02  incn=4.137e+01
+  iter=1  conv=9.177e-01  enen=6.179e+02  resn=1.401e+05  incn=2.652e-01
+  iter=2  conv=1.769e-05  enen=1.191e-02  resn=1.019e+01  incn=2.476e-01
+  iter=3  conv=1.058e-09  enen=7.123e-07  resn=6.183e+00  incn=3.847e-05
+  Primary solution summary: L2-norm            : 0.237919
+                            Max X-displacement : 1.70272 node 10199
+                            Max Y-displacement : 0.0581183 node 3503
+                            Max Z-displacement : 1.04358 node 6656
+  Total reaction forces: Sum(R) = -1.2426e-06 -0.560676 -1499.39
+  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 25.966
+  External energy: ((f,u^h)+(t,u^h))^0.5 : 25.9629
   Stress norm, L2: (sigma^h,sigma^h)^0.5 : 1.35093e+06
 
   step=2  time=0.2
-  iter=0  conv=9.626e-01  enen=1.348e+03  resn=1.428e+02  incn=9.129e+01
-  iter=1  conv=1.868e+00  enen=2.616e+03  resn=1.730e+05  incn=9.090e-01
-  iter=2  conv=1.988e-05  enen=2.784e-02  resn=2.103e+01  incn=2.803e-01
-  iter=3  conv=2.292e-10  enen=3.210e-07  resn=2.212e+00  incn=1.140e-04
-  Primary solution summary: L2-norm            : 0.770582
-                            Max X-displacement : 4.93983 node 18893
-                            Max Y-displacement : 0.165418 node 3778
-                            Max Z-displacement : 2.9882 node 9487
-  Total reaction forces: Sum(R) = 6.07142e-07 -0.217342 -4126.62
-  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 74.0424
-  External energy: ((f,u^h)+(t,u^h))^0.5 : 74.0896
+  iter=0  conv=9.468e-01  enen=6.375e+02  resn=1.437e+02  incn=4.078e+01
+  iter=1  conv=8.630e-01  enen=5.811e+02  resn=1.368e+05  incn=2.725e-01
+  iter=2  conv=4.998e-06  enen=3.366e-03  resn=8.551e+00  incn=9.556e-02
+  iter=3  conv=4.285e-11  enen=2.885e-08  resn=1.193e+00  incn=7.554e-06
+  Primary solution summary: L2-norm            : 0.471138
+                            Max X-displacement : 3.39224 node 10199
+                            Max Y-displacement : 0.115515 node 3503
+                            Max Z-displacement : 2.06173 node 6656
+  Total reaction forces: Sum(R) = 3.77867e-08 -0.10039 -2894.75
+  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 51.1915
+  External energy: ((f,u^h)+(t,u^h))^0.5 : 51.1976
   Stress norm, L2: (sigma^h,sigma^h)^0.5 : 1.35093e+06
 
   step=3  time=0.3
-  iter=0  conv=9.546e-01  enen=1.337e+03  resn=1.428e+02  incn=9.014e+01
-  iter=1  conv=1.826e+00  enen=2.557e+03  resn=1.713e+05  incn=1.059e+00
-  iter=2  conv=5.250e-05  enen=7.350e-02  resn=2.138e+01  incn=8.297e-01
-  iter=3  conv=7.679e-09  enen=1.075e-05  resn=1.286e+01  incn=7.346e-04
-  Primary solution summary: L2-norm            : 1.14346
-                            Max X-displacement : 7.38401 node 18893
-                            Max Y-displacement : 0.249636 node 3778
-                            Max Z-displacement : 4.45134 node 9487
-  Total reaction forces: Sum(R) = -5.33318e-05 -1.57146 -6137.91
-  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 110.291
-  External energy: ((f,u^h)+(t,u^h))^0.5 : 110.514
+  iter=0  conv=9.440e-01  enen=6.356e+02  resn=1.437e+02  incn=4.077e+01
+  iter=1  conv=8.662e-01  enen=5.832e+02  resn=1.375e+05  incn=3.082e-01
+  iter=2  conv=5.158e-06  enen=3.473e-03  resn=8.581e+00  incn=8.396e-02
+  iter=3  conv=1.594e-11  enen=1.073e-08  resn=7.126e-01  incn=1.513e-05
+  Primary solution summary: L2-norm            : 0.703035
+                            Max X-displacement : 5.08817 node 10199
+                            Max Y-displacement : 0.173638 node 3503
+                            Max Z-displacement : 3.07615 node 6656
+  Total reaction forces: Sum(R) = -6.79585e-07 -0.0333451 -4290.1
+  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 76.3164
+  External energy: ((f,u^h)+(t,u^h))^0.5 : 76.3701
   Stress norm, L2: (sigma^h,sigma^h)^0.5 : 1.35093e+06
 
   step=4  time=0.4
-  iter=0  conv=9.391e-01  enen=1.315e+03  resn=1.428e+02  incn=8.723e+01
-  iter=1  conv=1.691e+00  enen=2.367e+03  resn=1.642e+05  incn=1.167e+00
-  iter=2  conv=1.135e-04  enen=1.590e-01  resn=2.148e+01  incn=1.317e+00
-  iter=3  conv=4.859e-08  enen=6.803e-05  resn=3.285e+01  incn=1.544e-03
-  Primary solution summary: L2-norm            : 1.50124
-                            Max X-displacement : 9.75177 node 18893
-                            Max Y-displacement : 0.33476 node 3778
-                            Max Z-displacement : 5.88657 node 9487
-  Total reaction forces: Sum(R) = -0.000189804 -5.06372 -8149.21
-  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 146.006
-  External energy: ((f,u^h)+(t,u^h))^0.5 : 146.587
+  iter=0  conv=9.374e-01  enen=6.312e+02  resn=1.437e+02  incn=4.033e+01
+  iter=1  conv=8.455e-01  enen=5.693e+02  resn=1.358e+05  incn=3.478e-01
+  iter=2  conv=1.405e-05  enen=9.464e-03  resn=9.177e+00  incn=1.983e-01
+  iter=3  conv=3.063e-10  enen=2.062e-07  resn=3.253e+00  incn=5.010e-05
+  Primary solution summary: L2-norm            : 0.931351
+                            Max X-displacement : 6.77083 node 10199
+                            Max Y-displacement : 0.232304 node 3503
+                            Max Z-displacement : 4.08237 node 6656
+  Total reaction forces: Sum(R) = -6.92163e-06 -0.253149 -5685.46
+  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 101.268
+  External energy: ((f,u^h)+(t,u^h))^0.5 : 101.431
   Stress norm, L2: (sigma^h,sigma^h)^0.5 : 1.35093e+06
 
   step=5  time=0.5
-  iter=0  conv=9.183e-01  enen=1.286e+03  resn=1.428e+02  incn=8.313e+01
-  iter=1  conv=1.503e+00  enen=2.104e+03  resn=1.537e+05  incn=1.225e+00
-  iter=2  conv=1.623e-04  enen=2.273e-01  resn=2.119e+01  incn=1.553e+00
-  iter=3  conv=1.012e-07  enen=1.418e-04  resn=4.754e+01  incn=2.141e-03
-  Primary solution summary: L2-norm            : 1.84019
-                            Max X-displacement : 12.0076 node 18893
-                            Max Y-displacement : 0.420395 node 3778
-                            Max Z-displacement : 7.28648 node 9487
-  Total reaction forces: Sum(R) = -0.000350177 -7.91891 -10160.5
-  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 181.076
-  External energy: ((f,u^h)+(t,u^h))^0.5 : 182.225
+  iter=0  conv=9.273e-01  enen=6.244e+02  resn=1.437e+02  incn=3.954e+01
+  iter=1  conv=8.046e-01  enen=5.417e+02  resn=1.319e+05  incn=3.839e-01
+  iter=2  conv=2.754e-05  enen=1.854e-02  resn=1.006e+01  incn=2.949e-01
+  iter=3  conv=1.457e-09  enen=9.813e-07  resn=7.191e+00  incn=1.004e-04
+  Primary solution summary: L2-norm            : 1.1542
+                            Max X-displacement : 8.42275 node 10199
+                            Max Y-displacement : 0.291337 node 3503
+                            Max Z-displacement : 5.07654 node 6656
+  Total reaction forces: Sum(R) = -1.95502e-05 -0.633449 -7080.81
+  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 125.984
+  External energy: ((f,u^h)+(t,u^h))^0.5 : 126.338
   Stress norm, L2: (sigma^h,sigma^h)^0.5 : 1.35093e+06
 
   step=6  time=0.6
-  iter=0  conv=8.946e-01  enen=1.253e+03  resn=1.428e+02  incn=7.846e+01
-  iter=1  conv=1.303e+00  enen=1.825e+03  resn=1.419e+05  incn=1.239e+00
-  iter=2  conv=1.802e-04  enen=2.523e-01  resn=2.051e+01  incn=1.579e+00
-  iter=3  conv=1.159e-07  enen=1.623e-04  resn=5.074e+01  incn=2.292e-03
-  Primary solution summary: L2-norm            : 2.15889
-                            Max X-displacement : 14.1334 node 18893
-                            Max Y-displacement : 0.506269 node 3767
-                            Max Z-displacement : 8.64757 node 9487
-  Total reaction forces: Sum(R) = -0.000463292 -8.87027 -12171.8
-  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 215.456
-  External energy: ((f,u^h)+(t,u^h))^0.5 : 217.389
+  iter=0  conv=9.146e-01  enen=6.158e+02  resn=1.437e+02  incn=3.846e+01
+  iter=1  conv=7.495e-01  enen=5.046e+02  resn=1.264e+05  incn=4.124e-01
+  iter=2  conv=4.045e-05  enen=2.724e-02  resn=1.094e+01  incn=3.587e-01
+  iter=3  conv=3.283e-09  enen=2.210e-06  resn=1.080e+01  incn=1.524e-04
+  Primary solution summary: L2-norm            : 1.37018
+                            Max X-displacement : 10.03 node 10199
+                            Max Y-displacement : 0.350582 node 3503
+                            Max Z-displacement : 6.05572 node 6656
+  Total reaction forces: Sum(R) = -3.57924e-05 -1.00397 -8476.17
+  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 150.421
+  External energy: ((f,u^h)+(t,u^h))^0.5 : 151.059
   Stress norm, L2: (sigma^h,sigma^h)^0.5 : 1.35093e+06
 
   step=7  time=0.7
-  iter=0  conv=8.699e-01  enen=1.218e+03  resn=1.428e+02  incn=7.369e+01
-  iter=1  conv=1.119e+00  enen=1.567e+03  resn=1.301e+05  incn=1.221e+00
-  iter=2  conv=1.714e-04  enen=2.401e-01  resn=1.955e+01  incn=1.475e+00
-  iter=3  conv=9.357e-08  enen=1.310e-04  resn=4.535e+01  incn=2.074e-03
-  Primary solution summary: L2-norm            : 2.45757
-                            Max X-displacement : 16.1244 node 18893
-                            Max Y-displacement : 0.592206 node 3767
-                            Max Z-displacement : 9.96918 node 9487
-  Total reaction forces: Sum(R) = -0.000502407 -8.24861 -14183.1
-  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 249.15
-  External energy: ((f,u^h)+(t,u^h))^0.5 : 252.069
+  iter=0  conv=8.998e-01  enen=6.059e+02  resn=1.437e+02  incn=3.718e+01
+  iter=1  conv=6.871e-01  enen=4.627e+02  resn=1.199e+05  incn=4.323e-01
+  iter=2  conv=4.921e-05  enen=3.314e-02  resn=1.166e+01  incn=3.898e-01
+  iter=3  conv=4.739e-09  enen=3.191e-06  resn=1.294e+01  incn=1.902e-04
+  Primary solution summary: L2-norm            : 1.5784
+                            Max X-displacement : 11.5828 node 10199
+                            Max Y-displacement : 0.409912 node 3503
+                            Max Z-displacement : 7.01788 node 6656
+  Total reaction forces: Sum(R) = -5.12758e-05 -1.2466 -9871.53
+  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 174.548
+  External energy: ((f,u^h)+(t,u^h))^0.5 : 175.572
   Stress norm, L2: (sigma^h,sigma^h)^0.5 : 1.35093e+06
 
   step=8  time=0.8
-  iter=0  conv=8.455e-01  enen=1.184e+03  resn=1.428e+02  incn=6.912e+01
-  iter=1  conv=9.604e-01  enen=1.345e+03  resn=1.192e+05  incn=1.182e+00
-  iter=2  conv=1.485e-04  enen=2.079e-01  resn=1.840e+01  incn=1.311e+00
-  iter=3  conv=6.139e-08  enen=8.596e-05  resn=3.646e+01  incn=1.686e-03
-  Primary solution summary: L2-norm            : 2.73739
-                            Max X-displacement : 17.9844 node 18893
-                            Max Y-displacement : 0.678104 node 3767
-                            Max Z-displacement : 11.2524 node 9487
-  Total reaction forces: Sum(R) = -0.00048098 -6.87832 -16194.4
-  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 282.186
-  External energy: ((f,u^h)+(t,u^h))^0.5 : 286.274
+  iter=0  conv=8.838e-01  enen=5.951e+02  resn=1.437e+02  incn=3.579e+01
+  iter=1  conv=6.233e-01  enen=4.197e+02  resn=1.130e+05  incn=4.436e-01
+  iter=2  conv=5.269e-05  enen=3.548e-02  resn=1.212e+01  incn=3.941e-01
+  iter=3  conv=5.115e-09  enen=3.444e-06  resn=1.337e+01  incn=2.057e-04
+  Primary solution summary: L2-norm            : 1.77841
+                            Max X-displacement : 13.0752 node 10199
+                            Max Y-displacement : 0.469231 node 3503
+                            Max Z-displacement : 7.96186 node 6656
+  Total reaction forces: Sum(R) = -6.24892e-05 -1.32786 -11266.9
+  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 198.352
+  External energy: ((f,u^h)+(t,u^h))^0.5 : 199.862
   Stress norm, L2: (sigma^h,sigma^h)^0.5 : 1.35093e+06
 
   step=9  time=0.9
-  iter=0  conv=8.221e-01  enen=1.151e+03  resn=1.428e+02  incn=6.490e+01
-  iter=1  conv=8.289e-01  enen=1.161e+03  resn=1.096e+05  incn=1.131e+00
-  iter=2  conv=1.217e-04  enen=1.704e-01  resn=1.713e+01  incn=1.131e+00
-  iter=3  conv=3.576e-08  enen=5.007e-05  resn=2.754e+01  incn=1.281e-03
-  Primary solution summary: L2-norm            : 2.99993
-                            Max X-displacement : 19.7218 node 18893
-                            Max Y-displacement : 0.763913 node 3767
-                            Max Z-displacement : 12.4992 node 9487
-  Total reaction forces: Sum(R) = -0.000425474 -5.38585 -18205.7
-  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 314.605
-  External energy: ((f,u^h)+(t,u^h))^0.5 : 320.024
+  iter=0  conv=8.672e-01  enen=5.839e+02  resn=1.437e+02  incn=3.436e+01
+  iter=1  conv=5.622e-01  enen=3.785e+02  resn=1.060e+05  incn=4.474e-01
+  iter=2  conv=5.160e-05  enen=3.475e-02  resn=1.231e+01  incn=3.794e-01
+  iter=3  conv=4.527e-09  enen=3.048e-06  resn=1.249e+01  incn=2.002e-04
+  Primary solution summary: L2-norm            : 1.97014
+                            Max X-displacement : 14.5043 node 10199
+                            Max Y-displacement : 0.528472 node 3503
+                            Max Z-displacement : 8.88719 node 6656
+  Total reaction forces: Sum(R) = -6.80008e-05 -1.27591 -12662.2
+  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 221.828
+  External energy: ((f,u^h)+(t,u^h))^0.5 : 223.924
   Stress norm, L2: (sigma^h,sigma^h)^0.5 : 1.35093e+06
 
   step=10  time=1
-  iter=0  conv=8.001e-01  enen=1.120e+03  resn=1.428e+02  incn=6.108e+01
-  iter=1  conv=7.213e-01  enen=1.010e+03  resn=1.013e+05  incn=1.072e+00
-  iter=2  conv=9.674e-05  enen=1.355e-01  resn=1.579e+01  incn=9.615e-01
-  iter=3  conv=1.959e-08  enen=2.743e-05  resn=2.013e+01  incn=9.352e-04
-  Primary solution summary: L2-norm            : 3.24687
-                            Max X-displacement : 21.3468 node 18893
-                            Max Y-displacement : 0.849614 node 3767
-                            Max Z-displacement : 13.7118 node 9487
-  Total reaction forces: Sum(R) = -0.000358253 -4.07732 -20217
-  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 346.451
-  External energy: ((f,u^h)+(t,u^h))^0.5 : 353.343
+  iter=0  conv=8.505e-01  enen=5.727e+02  resn=1.437e+02  incn=3.294e+01
+  iter=1  conv=5.059e-01  enen=3.407e+02  resn=9.923e+04  incn=4.449e-01
+  iter=2  conv=4.747e-05  enen=3.196e-02  resn=1.225e+01  incn=3.530e-01
+  iter=3  conv=3.491e-09  enen=2.351e-06  resn=1.088e+01  incn=1.805e-04
+  Primary solution summary: L2-norm            : 2.15374
+                            Max X-displacement : 15.8699 node 10199
+                            Max Y-displacement : 0.587587 node 3503
+                            Max Z-displacement : 9.7939 node 6656
+  Total reaction forces: Sum(R) = -6.82321e-05 -1.14205 -14057.6
+  Energy norm:    |u^h| = a(u^h,u^h)^0.5 : 244.981
+  External energy: ((f,u^h)+(t,u^h))^0.5 : 247.758
   Stress norm, L2: (sigma^h,sigma^h)^0.5 : 1.35093e+06
 
   Time integration completed.
@@ -351,17 +355,21 @@ Writing HDF5 file ikkeLin.hdf5
                       |       CPU time     |      Wall time     |
 Task                  |  Total(s)  Mean(s) |  Total(s)  Mean(s) | calls | thread
 ----------------------+--------------------+--------------------+-------+-------
-ASMs3D::integrate(B)  |     37.09     0.74 |      1.90     0.04 |    50
-ASMs3D::integrate(I)  |   1297.42     1.62 |    139.98     0.17 |   800
-DataExporter::dumpTime|      1.00     0.10 |      0.16     0.02 |    10
-Element assembly      |   1252.22    31.31 |    133.35     3.33 |    40
-Equation solving      |   1000.20    25.01 |    999.81    25.00 |    40
-Model input           |      0.00          |      0.02          |
-Model preprocessing   |      0.00          |      0.01          |
-NonLinSIM::solveStep  |   2335.78   233.58 |   1142.06   114.21 |    10
-Norm integration      |     83.36     8.34 |      8.88     0.89 |    10
-Spline evaluation     |     22.36     0.03 |      3.20     0.00 |   850
-Other                 |      5.36          |      5.37          |
+ASMbase::L2projection |    116.14     0.73 |     22.82     0.14 |   160
+ASMs3D::evalSol(S)    |      0.41     0.00 |      0.40     0.00 |   160
+ASMs3D::integrate(B)  |     37.23     0.74 |      3.58     0.07 |    50
+ASMs3D::integrate(I)  |   2566.44     2.67 |   1122.80     1.17 |   960
+ASMs3D::projectSolutio|      0.48     0.00 |      0.46     0.00 |   160
+DataExporter::dumpTime|      0.59     0.06 |      0.68     0.07 |    10
+Element assembly      |   2448.81    61.22 |   1110.39    27.76 |    40
+Equation solving      |    522.86    13.07 |    520.45    13.01 |    40
+Model input           |      0.00          |      0.13          |
+Model preprocessing   |      0.00          |      0.03          |
+NonLinSIM::solveStep  |   3051.80   305.18 |   1638.44   163.84 |    10
+Norm integration      |     79.08     7.91 |      7.30     0.73 |    10
+Solution projection   |    116.14    11.61 |     22.83     2.28 |    10
+Spline evaluation     |     30.53     0.03 |      6.04     0.01 |  1170
+Other                 |      7.34          |      7.39          |
 ----------------------+--------------------+--------------------+-------+-------
-Total time            |   2342.14          |   1147.61          |
+Total time            |   3175.88          |   1669.50          |
 =================================================================

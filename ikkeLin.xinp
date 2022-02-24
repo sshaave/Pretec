@@ -7,12 +7,12 @@
 <!-- Geometry definitions -->
 <geometry>
 	<patchfile>G2/nlTotal.g2</patchfile>
-	<raiseorder lowerpatch="1" u="1" v="1" w="1"/>
-	<refine lowerpatch="1" u="3" v="3" w="3"/>
+	<raiseorder lowerpatch="1" u="2" v="2" w="2"/>
+	<refine lowerpatch="1" u="2" v="2" w="2"/>
 	<refine lowerpatch="1" upperpatch="2" v="2"/>
-	<refine lowerpatch="9" upperpatch="10" w="3"/>
-	<refine patch="15" w="3"/>
-	<refine lowerpatch="13" v="6"/>
+	<refine lowerpatch="9" upperpatch="10" w="2"/>
+	<refine patch="15" w="2"/>
+	<refine lowerpatch="13" v="3"/>
 	<topology>
 	    <connection master="1" mface="4" slave="2" sface="3"/>
 	    <connection master="2" mface="4" slave="3" sface="3"/>
@@ -80,7 +80,7 @@
     <dirichlet set="b2" comp="123"/>
     <dirichlet set="b3" comp="123"/>
 	<dirichlet set="symmXZ" comp="2"/>
-	<neumann set="lastflate" direction="3" type="expression">if(below(x,110),-0.22425*t-t*0.39375*(y-154)/597*(0.9+0.2*(x-30)/80),0)</neumann>
+	<neumann set="lastflate" direction="3" type="expression">if(below(x,110),-0.17005*t-t*0.24422*(y-154)/597*(0.9+0.2*(x-30)/80),0)</neumann>
 </boundaryconditions>
 
 <!-- Problem specific block !-->
@@ -105,6 +105,9 @@
 <!-- Post processing !-->
 <postprocessing>
 	<hdf5/>
+    <projection>
+        <cgl2/>
+    </projection>
 </postprocessing>
 
 </simulation>
