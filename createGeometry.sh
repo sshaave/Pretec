@@ -5,7 +5,7 @@
 # Bunnplate
 Bunn_l=597
 Bunn_b=100
-Bunn_b_opp=80
+Bunn_b_opp=40
 Bunn_b_bak=$(( Bunn_b - Bunn_b_opp))
 Bunn_t=10
 

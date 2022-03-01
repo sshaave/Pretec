@@ -4,12 +4,6 @@ import os
 # 1st input: name of result file
 textFile = sys.argv[1]
 with open(textFile+'.txt','w') as i1:
-    i1.write('\t\t<set name="allEdges" type="face">\n')
-    i1.write('\t\t\t<item patch="1">3</item>\n')
-    i1.write('\t\t\t<item patch="2">1 2</item>\n')
-#    i1.write('\t\t\t<item patch="17">5</item>\n')
-#    i1.write('\t\t\t<item patch="18">5</item>\n')
-    i1.write('\t\t</set>\n')
     i1.write('\t\t<set name="symmXZ" type="face">\n')
     i1.write('\t\t\t<item patch="13">4</item>\n')
     i1.write('\t\t\t<item patch="14">4</item>\n')
@@ -35,4 +29,15 @@ with open(textFile+'.txt','w') as i1:
     i1.write('\t\t</set>\n')
     i1.write('\t\t<set name="stiverplate" type="face">\n')
     i1.write('\t\t\t<item patch="16">3</item>\n')
+    i1.write('\t\t\t<item patch="15">3</item>\n')
+    i1.write('\t\t</set>\n')
+    i1.write('\t\t<set name="bunnplateMotEnde" type="face">\n')
+    i1.write('\t\t\t<item patch="13">3</item>\n')
+    i1.write('\t\t\t<item patch="14">3</item>\n')
+    i1.write('\t\t</set>\n')
+    i1.write('\t\t<set name="bunnplateStiverplate" type="face">\n')
+    i1.write('\t\t\t<item patch="13">2</item>\n')
+    i1.write('\t\t</set>\n')
+    i1.write('\t\t<set name="oppleggMotEnde" type="face">\n')
+    i1.write('\t\t\t<item patch="3">4</item>\n')
     i1.write('\t\t</set>\n')

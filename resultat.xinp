@@ -7,9 +7,8 @@
 <!-- Geometry definitions -->
 <geometry>
 	<patchfile>G2/total.g2</patchfile>
-	<raiseorder lowerpatch="1" u="0" v="0" w="0"/>
-	<refine lowerpatch="1" u="5" v="5" w="5"/>
-	<refine lowerpatch="1" upperpatch="0" v="0"/>
+	<raiseorder lowerpatch="1" u="1" v="1" w="1"/>
+	<refine lowerpatch="1" u="2" v="3" w="3"/>
 	<refine lowerpatch="9" upperpatch="10" w="3"/>
 	<refine patch="15" w="3"/>
 	<refine lowerpatch="13" v="5"/>
@@ -48,26 +47,32 @@
 		</set>
 		<set name="b2" type="face">
 			<item patch="2">1</item>
-        </set>
-        <set name="b2" type="edge">
-            <item patch="1">11</item>
-            <item patch="3">9</item>
+		</set>
+		<set name="b2" type="edge">
+			<item patch="1">11</item>
+			<item patch="3">9</item>
 		</set>
 		<set name="b3" type="face">
 			<item patch="2">2</item>
 		</set>
-        <set name="b3" type="edge">
-            <item patch="1">12</item>
-            <item patch="3">10</item>
-        </set>
-		<set name="stiverplate" type="face">
-            <item patch="15">3</item>
-			<item patch="16">3</item>
+		<set name="b3" type="edge">
+			<item patch="1">12</item>
+			<item patch="3">10</item>
 		</set>
-        <set name="bunnplate" type="face">
-            <item patch="13">3</item>
-            <item patch="14">3</item>
-        </set>
+		<set name="stiverplate" type="face">
+			<item patch="16">3</item>
+			<item patch="15">3</item>
+		</set>
+		<set name="bunnplateMotEnde" type="face">
+			<item patch="13">3</item>
+			<item patch="14">3</item>
+		</set>
+		<set name="bunnplateStiverplate" type="face">
+			<item patch="13">2</item>
+		</set>
+		<set name="oppleggMotEnde" type="face">
+			<item patch="3">4</item>
+		</set>
 		<set name="lastflate" type="face">
 			<item patch="13">6</item>
 		</set>
@@ -82,26 +87,29 @@
 <!-- Boundary conditions !-->
 <boundaryconditions>
 	<dirichlet set="b1" comp="123"/>
-    <dirichlet set="b2" comp="123"/>
-    <dirichlet set="b3" comp="123"/>
+	<dirichlet set="b2" comp="123"/>
+	<dirichlet set="b3" comp="123"/>
 	<dirichlet set="symmXZ" comp="2"/>
 	<neumann set="lastflate" direction="3" type="expression">if(below(x,110),-0.22425-0.39375*(y-154)/597*(0.9+0.2*(x-30)/80),0)</neumann>
 </boundaryconditions>
 
 <!-- Problem specific block !-->
 <elasticity>
-	<isotropic E="2.1e5" nu="0.3" rho="7850e-6"/>
-    <gravity z="-0.00981"/>
-    <boundaryforce set="b1"/>
-    <boundaryforce set="b2"/>
+	<isotropic E="2.1e5" nu="0.3" rho="7.850e-6"/>
+	<gravity z="-0.00981"/>
+	<boundaryforce set="b1"/>
+	<boundaryforce set="b2"/>
 	<boundaryforce set="b3"/>
-    <boundaryforce set="stiverplate"/>
-    <boundaryforce set="bunnplate"/>
+	<boundaryforce set="bunnplateMotEnde"/>
+	<boundaryforce set="bunnplateStiverplate"/>
+	<boundaryforce set="oppleggMotEnde"/>
+	<boundaryforce set="stiverplate"/>
 </elasticity>
 
 <!-- Post processing !-->
 <postprocessing>
 	<hdf5/>
+	<projection type="cgl2"/>
 </postprocessing>
 
 </simulation>

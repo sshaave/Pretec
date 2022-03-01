@@ -7,8 +7,8 @@
 <!-- Geometry definitions -->
 <geometry>
 	<patchfile>G2/HD200.g2</patchfile>
-	<raiseorder lowerpatch="1" u="1" v="1" w="1"/>
-	<refine lowerpatch="1" u="5" v="5" w="5"/>
+	<raiseorder lowerpatch="1" u="2" v="2" w="2"/>
+	<refine lowerpatch="1" u="3" v="3" w="3"/>
 	<refine lowerpatch="9" upperpatch="10" w="3"/>
 	<refine patch="15" w="3"/>
 	<refine lowerpatch="13" v="5"/>
@@ -62,10 +62,16 @@
 		<set name="stiverplate" type="face">
             <item patch="15">3</item>
 			<item patch="16">3</item>
-		</set>
-        <set name="bunnplate" type="face">
+        </set>
+        <set name="bunnplateMotEnde" type="face">
             <item patch="13">3</item>
             <item patch="14">3</item>
+        </set>
+        <set name="bunnplateStiverplate" type="face">
+            <item patch="13">2</item>
+        </set>
+        <set name="oppleggMotEnde" type="face">
+            <item patch="3">4</item>
         </set>
 		<set name="lastflate" type="face">
 			<item patch="13">6</item>
@@ -75,7 +81,7 @@
 
 <!-- Gauss quadrature scheme !-->
 <discretization>
-	<nGauss default="0"/>
+	<nGauss default="1"/>
 </discretization>
 
 <!-- Boundary conditions !-->
@@ -84,7 +90,7 @@
     <dirichlet set="b2" comp="123"/>
     <dirichlet set="b3" comp="123"/>
 	<dirichlet set="symmXZ" comp="2"/>
-	<neumann set="lastflate" direction="3" type="expression">if(below(x,110),-0.1803015-0.316583*(y-154)/597*(0.9+0.2*(x-30)/80),0)</neumann>
+	<neumann set="lastflate" direction="3" type="expression">if(below(x,110),-0.17005-0.24422*(y-154)/597*(0.9+0.2*(x-30)/80),0)</neumann>
 </boundaryconditions>
 
 <!-- Problem specific block !-->
@@ -94,8 +100,10 @@
     <boundaryforce set="b1"/>
     <boundaryforce set="b2"/>
 	<boundaryforce set="b3"/>
+    <boundaryforce set="bunnplateMotEnde"/>
+    <boundaryforce set="bunnplateStiverplate"/>
+    <boundaryforce set="oppleggMotEnde"/>
     <boundaryforce set="stiverplate"/>
-    <boundaryforce set="bunnplate"/>
 </elasticity>
 
 <!-- Post processing !-->

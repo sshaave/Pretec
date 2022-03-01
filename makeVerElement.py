@@ -36,6 +36,7 @@ sq1 = vf.extrude(square1, amount=(0,0,depth))
 sq1.raise_order(refP)
 if knot>0:
     sq1.insert_knot(knot/xL,direction=0)
+    sq1.insert_knot(knot/xL*1.5, direction=0)
 if knotX>0:
     sq1.insert_knot(knotX/yL, direction=1)
 

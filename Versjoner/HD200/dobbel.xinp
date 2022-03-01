@@ -84,6 +84,17 @@
 			<item patch="1">12</item>
 			<item patch="3">10</item>
 		</set>
+        <set name="oppleggMotEnde" type="face">
+            <item patch="3">4</item>
+        </set>
+        <set name="bunnplateMotEnde" type="face">
+            <item patch="15">3</item>
+            <item patch="16">3</item>
+        </set>
+        <set name="bunnplateMotBak" type="face">
+            <item patch="15">2</item>
+            <item patch="20">2</item>
+        </set>
 		<set name="stiverplate" type="face">
 			<item patch="17">3</item>
             <item patch="18">3</item>
@@ -116,6 +127,10 @@
 	<boundaryforce set="b2"/>
 	<boundaryforce set="b3"/>
 	<boundaryforce set="symmXZ"/>
+    <boundaryforce set="oppleggMotEnde"/>
+    <boundaryforce set="bunnplateMotEnde"/>
+    <boundaryforce set="bunnplateMotBak"/>
+    <boundaryforce set="stiverplate"/>
 </elasticity>
 
 <!-- Post processing !-->
