@@ -1,7 +1,3 @@
-		<set name="allEdges" type="face">
-			<item patch="1">3</item>
-			<item patch="2">1 2</item>
-		</set>
 		<set name="symmXZ" type="face">
 			<item patch="13">4</item>
 			<item patch="14">4</item>
@@ -14,11 +10,30 @@
 		<set name="b2" type="face">
 			<item patch="2">1</item>
 		</set>
+		<set name="b2" type="edge">
+			<item patch="1">11</item>
+			<item patch="3">9</item>
+		</set>
 		<set name="b3" type="face">
 			<item patch="2">2</item>
 		</set>
+		<set name="b3" type="edge">
+			<item patch="1">12</item>
+			<item patch="3">10</item>
+		</set>
 		<set name="stiverplate" type="face">
 			<item patch="16">3</item>
+			<item patch="15">3</item>
+		</set>
+		<set name="bunnplateMotEnde" type="face">
+			<item patch="13">3</item>
+			<item patch="14">3</item>
+		</set>
+		<set name="bunnplateStiverplate" type="face">
+			<item patch="13">2</item>
+		</set>
+		<set name="oppleggMotEnde" type="face">
+			<item patch="3">4</item>
 		</set>
 		<set name="lastflate" type="face">
 			<item patch="13">6</item>

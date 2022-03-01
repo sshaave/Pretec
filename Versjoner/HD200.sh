@@ -2,6 +2,8 @@
 
 # Geometri
 
+# ---- <Endres>
+
 # Bunnplate
 Bunn_l=597
 Bunn_b=100
@@ -24,6 +26,9 @@ Opp_t=12
 Opp_sveis_l=50
 Opp_l_fri=35
 
+# ----- </Endres>
+
+# Endres ikke
 
 refP=0
 move=30

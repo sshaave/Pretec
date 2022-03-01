@@ -2,10 +2,12 @@
 
 # Geometri
 
+#   ----- <Endres>
+
 # Bunnplate
 Bunn_l=1197
 Bunn_b=100
-Bunn_b_opp=80
+Bunn_b_opp=40
 Bunn_b_bak=$(( Bunn_b - Bunn_b_opp))
 Bunn_t=10
 
@@ -30,7 +32,9 @@ Opp_t=12
 Opp_sveis_l=50
 Opp_l_fri=35
 
+#  ----- </Endres>
 
+# Endres ikke
 refP=0
 move=30
 

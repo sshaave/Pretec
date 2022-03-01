@@ -11,7 +11,7 @@
 	<refine lowerpatch="1" u="2" v="3" w="3"/>
 	<refine lowerpatch="9" upperpatch="10" w="3"/>
 	<refine patch="15" w="3"/>
-	<refine lowerpatch="13" v="5"/>
+	<refine lowerpatch="13" v="4"/>
 	<topology>
 	    <connection master="1" mface="4" slave="2" sface="3"/>
 	    <connection master="2" mface="4" slave="3" sface="3"/>
