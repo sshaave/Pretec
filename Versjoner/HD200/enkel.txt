@@ -1,0 +1,360 @@
+
+ >>> IFEM Linear Elasticity solver <<<
+ =====================================
+
+ Executing command:
+ LinEl enkel.xinp
+
+ ===== IFEM v0.9.0 initialized =====
+       HDF5 support: enabled
+  LR spline support: enabled
+     OpenMP support: enabled
+        MPI support: disabled
+      PETSc support: disabled
+    SuperLU support: enabled (serial)
+    UMFPack support: enabled (v5.7.6)
+       ISTL support: disabled
+        VTF support: disabled
+
+Input file: enkel.xinp
+Equation solver: 2
+Number of Gauss points: 4
+Solution component output zero tolerance: 1e-06
+
+Parsing input file enkel.xinp
+
+Parsing <discretization>
+
+Parsing <geometry>
+  Parsing <patchfile>
+	Reading data file G2/HD200.g2
+	Reading patch 1
+	Reading patch 2
+	Reading patch 3
+	Reading patch 4
+	Reading patch 5
+	Reading patch 6
+	Reading patch 7
+	Reading patch 8
+	Reading patch 9
+	Reading patch 10
+	Reading patch 11
+	Reading patch 12
+	Reading patch 13
+	Reading patch 14
+	Reading patch 15
+	Reading patch 16
+  Parsing <raiseorder>
+  Parsing <refine>
+  Parsing <refine>
+  Parsing <refine>
+  Parsing <refine>
+  Parsing <topology>
+  Parsing <topologysets>
+	Topology sets: b1 (1,3,2D)
+	               b2 (1,11,1D) (3,9,1D) (2,1,2D)
+	               b3 (1,12,1D) (3,10,1D) (2,2,2D)
+	               bunnplateMotEnde (13,3,2D) (14,3,2D)
+	               bunnplateStiverplate (13,2,2D)
+	               lastflate (13,6,2D)
+	               oppleggMotEnde (3,4,2D)
+	               stiverplate (15,3,2D) (16,3,2D)
+	               symmXZ (13,4,2D) (14,4,2D) (15,4,2D) (16,4,2D)
+  Parsing <patchfile>
+  Parsing <raiseorder>
+	Raising order of P1 1 1 1
+	Raising order of P2 1 1 1
+	Raising order of P3 1 1 1
+	Raising order of P4 1 1 1
+	Raising order of P5 1 1 1
+	Raising order of P6 1 1 1
+	Raising order of P7 1 1 1
+	Raising order of P8 1 1 1
+	Raising order of P9 1 1 1
+	Raising order of P10 1 1 1
+	Raising order of P11 1 1 1
+	Raising order of P12 1 1 1
+	Raising order of P13 1 1 1
+	Raising order of P14 1 1 1
+	Raising order of P15 1 1 1
+	Raising order of P16 1 1 1
+  Parsing <refine>
+	Refining P1 2 3 3
+	Refining P2 2 3 3
+	Refining P3 2 3 3
+	Refining P4 2 3 3
+	Refining P5 2 3 3
+	Refining P6 2 3 3
+	Refining P7 2 3 3
+	Refining P8 2 3 3
+	Refining P9 2 3 3
+	Refining P10 2 3 3
+	Refining P11 2 3 3
+	Refining P12 2 3 3
+	Refining P13 2 3 3
+	Refining P14 2 3 3
+	Refining P15 2 3 3
+	Refining P16 2 3 3
+  Parsing <refine>
+	Refining P9 0 0 2
+	Refining P10 0 0 2
+  Parsing <refine>
+	Refining P15 0 0 2
+  Parsing <refine>
+	Refining P13 0 1 0
+	Refining P14 0 1 0
+	Refining P15 0 1 0
+	Refining P16 0 1 0
+  Parsing <topology>
+	Connecting P2 F3 to P1 F4 orient 0
+	Connecting P3 F3 to P2 F4 orient 0
+	Connecting P4 F3 to P3 F4 orient 0
+	Connecting P6 F6 to P4 F5 orient 0
+	Connecting P5 F3 to P4 F4 orient 0
+	Connecting P7 F6 to P5 F5 orient 0
+	Connecting P7 F3 to P6 F4 orient 0
+	Connecting P9 F6 to P7 F5 orient 0
+	Connecting P8 F1 to P7 F2 orient 0
+	Connecting P10 F6 to P8 F5 orient 0
+	Connecting P16 F3 to P8 F4 orient 0
+	Connecting P11 F6 to P9 F5 orient 0
+	Connecting P10 F1 to P9 F2 orient 0
+	Connecting P12 F6 to P10 F5 orient 0
+	Connecting P15 F3 to P10 F4 orient 0
+	Connecting P13 F3 to P11 F4 orient 0
+	Connecting P12 F1 to P11 F2 orient 0
+	Connecting P14 F3 to P12 F4 orient 0
+	Connecting P14 F1 to P13 F2 orient 0
+	Connecting P15 F5 to P14 F6 orient 0
+	Connecting P16 F5 to P15 F6 orient 0
+  Parsing <topologysets>
+
+Parsing <boundaryconditions>
+  Parsing <dirichlet>
+	Dirichlet code 123: (fixed)
+  Parsing <dirichlet>
+	Dirichlet code 1000123: (fixed)
+  Parsing <dirichlet>
+	Dirichlet code 2000123: (fixed)
+  Parsing <dirichlet>
+	Dirichlet code 2: (fixed)
+  Parsing <neumann>
+	Neumann code 1000000 direction 3 (expression): if(below(x,90),-0.325628*(y-154)/597,0)
+  Parsing <neumann>
+	Neumann code 2000000 direction 3 (expression): if(below(x,70),-0.3401,0)
+
+Parsing <elasticity>
+  Parsing <isotropic>
+	Material code 0: 210000 0.3 7.85e-06
+	Gravitation vector: 0 0 -0.00981
+  Parsing <boundaryforce>
+	Boundary force "b1" code 3000000
+  Parsing <boundaryforce>
+	Boundary force "b2" code 4000000
+  Parsing <boundaryforce>
+	Boundary force "b3" code 5000000
+  Parsing <boundaryforce>
+	Boundary force "bunnplateMotEnde" code 6000000
+  Parsing <boundaryforce>
+	Boundary force "bunnplateStiverplate" code 7000000
+  Parsing <boundaryforce>
+	Boundary force "oppleggMotEnde" code 8000000
+  Parsing <boundaryforce>
+	Boundary force "stiverplate" code 9000000
+
+Parsing <postprocessing>
+  Parsing <hdf5>
+  Parsing <projection>
+
+Parsing input file succeeded.
+
+
+Equation solver: 2
+Number of Gauss points: p+1 (p = polynomial degree of basis)
+Enabled projection(s): Continuous global L2-projection
+HDF5 result database: (default).hdf5
+
+Problem definition:
+Elasticity: 3D, gravity = 0 0 -0.00981
+LinIsotropic: E = 210000, nu = 0.3, rho = 7.85e-06, alpha = 1.2e-07
+
+Renumbered 9022 nodes.
+
+Resolving Dirichlet boundary conditions
+	Constraining P1 E11 in direction(s) 123
+	Constraining P3 E9 in direction(s) 123
+	Constraining P1 E12 in direction(s) 123
+	Constraining P3 E10 in direction(s) 123
+	Constraining P1 F3 in direction(s) 123
+	Constraining P2 F1 in direction(s) 123
+	Constraining P2 F2 in direction(s) 123
+	Constraining P13 F4 in direction(s) 2
+	Constraining P14 F4 in direction(s) 2
+	Constraining P15 F4 in direction(s) 2
+	Constraining P16 F4 in direction(s) 2
+
+
+ >>> SAM model summary <<<
+Number of elements    3360
+Number of nodes       8179
+Number of dofs        24537
+Number of unknowns    23895
+
+ Thread group 1 for boundary face 3
+	thread 1: 8 elements
+	thread 2: 8 elements
+ Thread group 2 for boundary face 3
+	thread 1: 12 elements
+	thread 2: 16 elementsBoundary section 1: X0 = 80 30 6
+Boundary section 2: X0 = 30 90 6
+Boundary section 3: X0 = 130 90 6
+
+ Thread group 1 for boundary face 3
+	thread 1: 8 elements
+	thread 2: 8 elements
+ Thread group 2 for boundary face 3
+	thread 1: 12 elements
+	thread 2: 16 elementsBoundary section 4: X0 = 82 154 -275
+
+ Thread group 1 for boundary face 2
+	thread 1: 8 elements
+	thread 2: 8 elements
+	thread 3: 12 elements
+	thread 4: 8 elements
+ Thread group 2 for boundary face 2
+	thread 1: 8 elements
+	thread 2: 8 elements
+	thread 3: 8 elements
+	thread 4: 8 elementsBoundary section 5: X0 = 130 452.5 -275
+
+ Thread group 1 for boundary face 4
+	thread 1: 8 elements
+	thread 2: 8 elements
+ Thread group 2 for boundary face 4
+	thread 1: 12 elements
+	thread 2: 16 elementsBoundary section 6: X0 = 80 145 6
+
+ Thread group 1 for boundary face 3
+	thread 1: 6 elements
+	thread 2: 6 elements
+	thread 3: 6 elements
+ Thread group 2 for boundary face 3
+	thread 1: 6 elements
+	thread 2: 6 elements
+	thread 3: 6 elementsBoundary section 7: X0 = 132 154 -135
+
+Writing HDF5 file enkel.hdf5
+Number of quadrature points 106488 1683
+
+Pre-computing sparsity pattern for system matrix (23895x23895): nNZ = 5804129
+
+
+Processing integrand associated with code 0
+
+Assembling interior matrix terms for P1
+
+Assembling interior matrix terms for P2
+
+Assembling interior matrix terms for P3
+
+Assembling interior matrix terms for P4
+
+Assembling interior matrix terms for P5
+
+Assembling interior matrix terms for P6
+
+Assembling interior matrix terms for P7
+
+Assembling interior matrix terms for P8
+
+Assembling interior matrix terms for P9
+
+Assembling interior matrix terms for P10
+
+Assembling interior matrix terms for P11
+
+Assembling interior matrix terms for P12
+
+Assembling interior matrix terms for P13
+
+Assembling interior matrix terms for P14
+
+Assembling interior matrix terms for P15
+
+Assembling interior matrix terms for P16
+
+Assembling Neumann matrix terms for boundary 6 on P13
+
+Assembling Neumann matrix terms for boundary 6 on P13
+
+Done.
+
+Sum external load : 0 0 -13953.6
+
+Solving the equation system ...
+	Condition number: 1.8555e+10
+
+ >>> Solution summary <<<
+
+L2-norm            : 2.80982
+Max X-displacement : 23.2505 node 8176
+Max Y-displacement : 0.68077 node 3070
+Max Z-displacement : 11.8749 node 5413
+
+Reaction force at section 1 : -245.932 -577.309 -1464.17
+Reaction force at section 2 : 433.793 696.733 11880.4
+Reaction force at section 3 : -187.861 -6329.53 3537.34
+Reaction force at section 5 : 0 2428.3 0
+Total reaction force        : 4.54404e-05 -3781.81 13953.6
+Interface force at section 4: 3080.35 2883.19 -5317.64
+Interface force at section 5: -240.659 -260.191 180.516
+Interface force at section 6: 4.54402e-05 -6210.11 13953.6
+Interface force at section 7: -2839.69 3587.11 -8816.46
+
+Projecting secondary solution ...
+	Continuous global L2-projection
+
+
+Integrating solution norms (FE solution) ...
+Energy norm |u^h| = a(u^h,u^h)^0.5   : 302.227
+External energy ((f,u^h)+(t,u^h)^0.5 : 302.228
+Boundary tractions at section 1: -246.819 -615.327 -1722.94 -26479.1 -1802.52 -7731.22
+Boundary tractions at section 2: 423.017 516.722 6374.52 336135 -77768.3 -11018.1
+Boundary tractions at section 3: -1496.25 -4495.51 2792.53 157230 55858.5 31163.7
+Boundary tractions at section 4: -2869.54 -7361.33 7038.65 98900 629089 3884.59
+Boundary tractions at section 5: 15146.8 -6114.64 11167.6 2.11923e+06 262523 573635
+Boundary tractions at section 6: 210.212 6432.58 -15985.3 -44282 -360078 387615
+Boundary tractions at section 7: 13003.7 2216.3 10346.7 1.09669e+06 -633777 -129449
+
+
+>>> Error estimates based on Continuous global L2-projection <<<
+Energy norm |u^r| = a(u^r,u^r)^0.5   : 298.731
+Error norm a(e,e)^0.5, e=u^r-u^h     : 29.1095
+- relative error (% of |u^r|) : 9.74438
+L2-norm |s^r| = (s^r,s^r)^0.5        : 98631.7
+L2-error (e,e)^0.5, e=s^r-s^h        : 11343.4
+- relative error (% of |s^r|) : 11.5008
+
+===============================================================
+===   Profiling results for LinEl
+=================================================================
+                      |       CPU time     |      Wall time     |
+Task                  |  Total(s)  Mean(ms)|  Total(s)  Mean(ms)| calls | thread
+----------------------+--------------------+--------------------+-------+-------
+ASMbase::globalL2     |      0.69    42.97 |      0.69    43.23 |    16
+ASMs3D::evalSol(S)    |      0.22    13.67 |      0.23    14.19 |    16
+ASMs3D::integrate(B)  |      9.31   620.83 |      0.60    39.93 |    15
+ASMs3D::integrate(I)  |     28.42   728.77 |      3.32    85.25 |    39
+DataExporter::dumpTime|      0.02          |      0.04          |
+Element assembly      |     24.11 12054.69 |      2.66  1332.26 |     2
+Equation solving      |      3.83          |      3.84          |
+Model input           |      0.02          |      0.00          |
+Norm integration      |      8.78          |      0.95          |
+Postprocessing        |      0.02          |      0.04          |
+SIM::getBoundaryForce |      4.84   691.96 |      0.32    45.56 |     7
+Solution projection   |      0.69          |      0.69          |
+Spline evaluation     |      1.31    18.75 |      0.11     1.51 |    70
+Other                 |      2.11          |      1.92          |
+----------------------+--------------------+--------------------+-------+-------
+Total time            |     44.39          |     10.43          |
+=================================================================
