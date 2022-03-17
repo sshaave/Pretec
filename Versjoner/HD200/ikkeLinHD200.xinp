@@ -47,31 +47,31 @@
 		</set>
 		<set name="b2" type="face">
 			<item patch="2">1</item>
-		</set>
-		<set name="b2" type="edge">
-			<item patch="1">11</item>
-			<item patch="3">9</item>
+        </set>
+        <set name="b2" type="edge">
+            <item patch="1">11</item>
+            <item patch="3">9</item>
 		</set>
 		<set name="b3" type="face">
 			<item patch="2">2</item>
 		</set>
-		<set name="b3" type="edge">
-			<item patch="1">12</item>
-			<item patch="3">10</item>
-		</set>
+        <set name="b3" type="edge">
+            <item patch="1">12</item>
+            <item patch="3">10</item>
+        </set>
+        <set name="bunnplateMotEnde" type="face">
+            <item patch="13">3</item>
+            <item patch="14">3</item>
+        </set>
+        <set name="bunnplateMotStiverplate" type="face">
+            <item patch="13">2</item>
+        </set>
+        <set name="oppleggMotEnde" type="face">
+            <item patch="3">4</item>
+        </set>
 		<set name="stiverplate" type="face">
 			<item patch="16">3</item>
-			<item patch="15">3</item>
-		</set>
-		<set name="bunnplateMotEnde" type="face">
-			<item patch="13">3</item>
-			<item patch="14">3</item>
-		</set>
-		<set name="bunnplateStiverplate" type="face">
-			<item patch="13">2</item>
-		</set>
-		<set name="oppleggMotEnde" type="face">
-			<item patch="3">4</item>
+            <item patch="15">3</item>
 		</set>
 		<set name="lastflate" type="face">
 			<item patch="13">6</item>
@@ -87,30 +87,41 @@
 <!-- Boundary conditions !-->
 <boundaryconditions>
 	<dirichlet set="b1" comp="123"/>
-	<dirichlet set="b2" comp="123"/>
-	<dirichlet set="b3" comp="123"/>
+    <dirichlet set="b2" comp="123"/>
+    <dirichlet set="b3" comp="123"/>
 	<dirichlet set="symmXZ" comp="2"/>
-	<neumann set="lastflate" direction="3" type="expression">if(below(x,90),-0.325628*(y-154)/597,0)</neumann>
-    <neumann set="lastflate" direction="3" type="expression">if(below(x,70),-0.3401,0)</neumann>
+	<neumann set="lastflate" direction="3" type="expression">if(below(x,90),-t*0.325628*(y-154)/597,0)</neumann>
+    <neumann set="lastflate" direction="3" type="expression">if(below(x,70),-0.3401*t,0)</neumann>
 </boundaryconditions>
 
 <!-- Problem specific block !-->
 <elasticity>
 	<isotropic E="2.1e5" nu="0.3" rho="7.850e-6"/>
-	<gravity z="-0.00981"/>
-	<boundaryforce set="b1"/>
-	<boundaryforce set="b2"/>
+    <gravity z="-0.00981"/>
+    <boundaryforce set="b1"/>
+    <boundaryforce set="b2"/>
 	<boundaryforce set="b3"/>
-	<boundaryforce set="bunnplateMotEnde"/>
-	<boundaryforce set="bunnplateStiverplate"/>
-	<boundaryforce set="oppleggMotEnde"/>
-	<boundaryforce set="stiverplate"/>
+    <boundaryforce set="symmXZ"/>
+    <boundaryforce set="bunnplateMotEnde"/>
+    <boundaryforce set="bunnplateMotStiverplate"/>
+    <boundaryforce set="oppleggMotEnde"/>
+    <boundaryforce set="stiverplate"/>
 </elasticity>
+
+<!-- General - nonlinear solution setup !-->
+<nonlinearsolver>
+    <rtol>1.0e-6</rtol>
+<!--    <arclen>10.0</arclen> !-->
+    <dtol>1.0e5</dtol>
+    <maxits>20</maxits>
+    <nupdate>20</nupdate>
+    <timestepping dt="0.1"/>
+</nonlinearsolver>
 
 <!-- Post processing !-->
 <postprocessing>
 	<hdf5/>
-	<projection type="cgl2"/>
+    <projection type="cgl2"/>
 </postprocessing>
 
 </simulation>
