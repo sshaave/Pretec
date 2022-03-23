@@ -6,68 +6,84 @@
 
 <!-- Geometry definitions -->
 <geometry>
-	<patchfile>G2/HD200.g2</patchfile>
-	<raiseorder lowerpatch="1" u="2" v="2" w="2"/>
-	<refine lowerpatch="1" u="2" v="3" w="3"/>
-	<refine lowerpatch="5" upperpatch="6" w="1"/>
-	<refine patch="11" w="1"/>
-	<refine lowerpatch="9"v="1"/>
+	<patchfile>G2/nlHD200.g2</patchfile>
+	<raiseorder lowerpatch="1" u="1" v="1" w="1"/>
+	<refine lowerpatch="1" upperpatch="7" u="2" v="3" w="1"/>
+    <refine lowerpatch="8" u="2" v="3" w="3"/>
+	<refine lowerpatch="8" upperpatch="9" w="1"/>
+	<refine patch="15" w="1"/>
+	<refine lowerpatch="12" v="1"/>
 	<topology>
-	    <connection master="1" mface="4" slave="2" sface="3"/>
-	    <connection master="2" mface="4" slave="3" sface="3"/>
-	    <connection master="3" mface="4" slave="4" sface="3"/>
-	    <connection master="4" mface="5" slave="5" sface="6"/>
-	    <connection master="5" mface="5" slave="7" sface="6"/>
-	    <connection master="5" mface="2" slave="6" sface="1"/>
-	    <connection master="6" mface="5" slave="8" sface="6"/>
-	    <connection master="6" mface="4" slave="11" sface="3"/>
-	    <connection master="7" mface="4" slave="9" sface="3"/>
-	    <connection master="7" mface="2" slave="8" sface="1"/>
-	    <connection master="8" mface="4" slave="10" sface="3"/>
-	    <connection master="9" mface="2" slave="10" sface="1"/>
-	    <connection master="10" mface="6" slave="11" sface="5"/>
-	    <connection master="11" mface="6" slave="12" sface="5"/>
+	    <connection master="1" mface="5" slave="2" sface="6"/>
+	    <connection master="1" mface="4" slave="3" sface="3"/>
+	    <connection master="2" mface="4" slave="4" sface="3"/>
+	    <connection master="3" mface="5" slave="4" sface="6"/>
+	    <connection master="3" mface="4" slave="5" sface="3"/>
+	    <connection master="4" mface="4" slave="6" sface="3"/>
+	    <connection master="5" mface="5" slave="6" sface="6"/>
+	    <connection master="6" mface="4" slave="7" sface="3"/>
+	    <connection master="7" mface="5" slave="8" sface="6"/>
+	    <connection master="8" mface="5" slave="10" sface="6"/>
+	    <connection master="8" mface="2" slave="9" sface="1"/>
+	    <connection master="9" mface="5" slave="11" sface="6"/>
+	    <connection master="9" mface="4" slave="15" sface="3"/>
+	    <connection master="10" mface="4" slave="12" sface="3"/>
+	    <connection master="10" mface="2" slave="11" sface="1"/>
+	    <connection master="11" mface="4" slave="14" sface="3"/>
+	    <connection master="12" mface="5" slave="13" sface="6"/>
+	    <connection master="12" mface="2" slave="14" sface="1"/>
+	    <connection master="14" mface="6" slave="15" sface="5"/>
+	    <connection master="15" mface="6" slave="16" sface="5"/>
 	</topology>
 	<topologysets>
 		<set name="symmXZ" type="face">
-			<item patch="9">4</item>
-			<item patch="10">4</item>
-			<item patch="11">4</item>
 			<item patch="12">4</item>
+			<item patch="13">4</item>
+			<item patch="14">4</item>
+			<item patch="15">4</item>
+            <item patch="16">4</item>
 		</set>
 		<set name="b1" type="face">
 			<item patch="1">3</item>
+            <item patch="2">3</item>
 		</set>
 		<set name="b2" type="face">
-			<item patch="2">1</item>
+			<item patch="3">1</item>
+            <item patch="4">1</item>
 		</set>
 		<set name="b2" type="edge">
 			<item patch="1">11</item>
-			<item patch="3">9</item>
+            <item patxh="2">11</item>
+			<item patch="5">9</item>
+            <item patch="6">9</item>
 		</set>
 		<set name="b3" type="face">
-			<item patch="2">2</item>
+			<item patch="3">2</item>
+            <item patch="4">2</item>
 		</set>
 		<set name="b3" type="edge">
 			<item patch="1">12</item>
-			<item patch="3">10</item>
+            <item patch="2">12</item>
+			<item patch="5">10</item>
+            <item patch="6">10</item>
 		</set>
 		<set name="stiverplate" type="face">
-			<item patch="11">3</item>
-			<item patch="12">3</item>
+			<item patch="15">3</item>
+			<item patch="16">3</item>
 		</set>
 		<set name="bunnplateMotEnde" type="face">
-			<item patch="9">3</item>
-			<item patch="10">3</item>
+			<item patch="12">3</item>
+			<item patch="14">3</item>
 		</set>
 		<set name="bunnplateStiverplate" type="face">
-			<item patch="10">6</item>
+            <item patch="11">6</item>
+			<item patch="14">6</item>
 		</set>
 		<set name="oppleggMotEnde" type="face">
-			<item patch="3">4</item>
+			<item patch="6">4</item>
 		</set>
 		<set name="lastflate" type="face">
-			<item patch="9">6</item>
+			<item patch="12">6</item>
 		</set>
 	</topologysets>
 </geometry>
@@ -83,7 +99,7 @@
 	<dirichlet set="b2" comp="123"/>
 	<dirichlet set="b3" comp="123"/>
 	<dirichlet set="symmXZ" comp="2"/>
-	<neumann set="lastflate" direction="3" type="expression">if(below(x,90),-t*0.325628*(y-154)/597,0)</neumann>
+	<neumann set="lastflate" direction="3" type="expression">if(below(x,90),-t*0.325628*(y-134)/597,0)</neumann>
 	<neumann set="lastflate" direction="3" type="expression">if(below(x,70),-t*0.3401,0)</neumann>
 </boundaryconditions>
 
@@ -94,15 +110,15 @@
 	<boundaryforce set="b1"/>
 	<boundaryforce set="b2"/>
 	<boundaryforce set="b3"/>
+    <boundaryforce set="symmXZ"/>
 	<boundaryforce set="stiverplate"/>
 	<boundaryforce set="bunnplateMotEnde"/>
 	<boundaryforce set="bunnplateStiverplate"/>
 	<boundaryforce set="oppleggMotEnde"/>
-    <boundaryforce set="symmXZ"/>
 </elasticity>
 
 <nonlinearsolver>
-    <rtol>1.0e-6</rtol>
+    <rtol>1.0e-7</rtol>
 <!--    <arclen>10</arclen> !-->
     <dtol>1.0e5</dtol>
     <maxits>20</maxits>
